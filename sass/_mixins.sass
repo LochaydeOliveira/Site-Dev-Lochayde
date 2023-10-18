@@ -5,13 +5,24 @@
 	padding: 1.2rem 0
 	margin: 0 auto
 
+
+@mixin nav-none
+	display: none
+
+@mixin nav-block
+	display: block
+	
+
 @mixin itens-navbar
 	color: variables.$text-color-gray
-	font-size: 1rem
+	font-size: 1.12rem
 	font-weight: 400
+	transition: 150ms linear
 	
 	&:hover
 		color: variables.$secondary-color
+		transform: scale(1.05)
+
 
 @mixin slide-show-desktop
 	margin-top: 5%
