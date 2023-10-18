@@ -6,13 +6,26 @@ body
 
 .header-main
 	background-color: variables.$black-color
-	@include mixins.mobile
+	box-shadow: 0px 15px 20px 0px #ffc51852
+
+	@include mixins.mobile    	
 		padding: 0 1rem
+		box-shadow: 0px 15px 20px 0px #ffc51852
 
 .brand-logo
 	@include mixins.mobile
 		display: flex
 		width: 180px
+
+#nav-desk
+	@include mixins.nav-block
+	@include mixins.mobile
+		@include mixins.nav-none
+
+#nav-mobi
+	@include mixins.nav-none
+	@include mixins.mobile
+		@include mixins.nav-block
 
 .nav
 	@include mixins.container
@@ -25,8 +38,10 @@ body
 		flex-wrap: nowrap
 
 	.nav-item
-		a 
+		a
+			
 			@include mixins.itens-navbar
+		
 
 	i
 		color: variables.$secondary-color

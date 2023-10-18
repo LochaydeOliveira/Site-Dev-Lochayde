@@ -10,7 +10,7 @@
     <meta name="description" content="Este é o site do canal Lochayde Oliveira." />
     <link rel="shortcut icon" href="img/icone favorito.png" type="image/x-icon" alt="Icone favorito de Lochayde Oliveira">
 
-    <link rel="stylesheet" href="css/syles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -21,7 +21,7 @@
 </head>
 <body>
 <header class="fixed-top header-main">
-    <nav class="w-100 nav navbar navbar-nav">
+    <nav id="nav-desk" class="navbar-expand w-100 nav navbar navbar-nav">
         <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img class="brand-logo" width="240" src="img/logo lochayde oliveira texto branco.png" alt="logo do site lochayde oliveira">
@@ -29,7 +29,46 @@
                 <i class="hidden-icon bi bi-list fs-1 pe-3 ps-3 pt-0 rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">                    
                 </i>
             <div class="collapse navbar-collapse" id="navbarNav">   
-                <ul class="d-flex fw-light gap-4 ms-5 navbar-nav">    
+                <ul class="d-flex fw-light gap-5 ms-5 navbar-nav">    
+                    <li class="nav-item">
+                        <a class="text-nav-link nav-link active" href="https://lochayde.com.br/">
+                        Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-nav-link nav-link" href="https://chat.whatsapp.com/FVLRZE4SeVxA13guoZlmbz" target="_blank">
+                        Comunidade no WhatsApp
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle text-nav-link nav-link" data-bs-toggle="dropdown" href="#">Me Contrate</a>
+                        <ul class="dropdown-menu">                        
+                            <a class="dropdown-item" href="#">Para Freelancer</a>
+                            <a class="dropdown-item" href="#">Mentoria</a>                        
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-nav-link nav-link" href="#">
+                        Sobre
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-nav-link nav-link" href="#">
+                        Contato
+                        </a>
+                    </li>    
+                </ul>
+            </div>     
+        </div>
+    </nav>
+    <nav id="nav-mobi" class="w-100 nav navbar navbar-nav">
+        <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="brand-logo" width="240" src="img/logo lochayde oliveira texto branco.png" alt="logo do site lochayde oliveira">
+                </a> 
+                <i class="hidden-icon bi bi-list fs-1 pe-3 ps-3 pt-0 rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">                    
+                </i>
+            <div class="collapse navbar-collapse" id="navbarNav">   
+                <ul class="d-flex fw-light navbar-nav">    
                     <li class="nav-item">
                         <a class="text-nav-link nav-link active" href="https://lochayde.com.br/">
                         Início
