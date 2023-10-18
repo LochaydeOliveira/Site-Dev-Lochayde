@@ -118,10 +118,19 @@ body {
   margin: 0 auto 500px auto;
 }
 
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    background: #fff;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    bottom: 0;
+}
+
 .card-slide {
   padding: 0px 0px 10px 0px;
   border-radius: 20px;
-  background-color: #ffffff !important;
+  width: 280px !important;
 }
 .card-slide .card-body .info-purchase-price {
   font-size: 2.7rem;
@@ -139,6 +148,9 @@ body {
 
 .card {
   border-radius: 20px !important;
+  transform: scale(0.95);
+  background: none!important;
+
 }
 .card button {
   background-color: #ffc736;
@@ -160,5 +172,53 @@ body {
 .hidden-button-banner {
   visibility: hidden;
 }
+
+.fa-chevron-circle-left:before, .fa-circle-chevron-left:before {
+  content: "\f137";
+  font-size: 45px;
+  color: #ffc736 !important;
+  box-shadow: 0 0 100px 80px #000;
+  border-radius: 50%;
+  transition: 150ms linear;
+  font-weight: 900;
+  margin: 0 0 0 50% !important;
+}
+
+.fa-chevron-circle-right:before, .fa-circle-chevron-right:before {
+  content: "\f138";
+  font-size: 45px;
+  color: #ffc736 !important;
+  box-shadow: 0 0 100px 80px #000;
+  border-radius: 50%;
+  transition: 150ms linear;
+  font-weight: 900;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: "next";
+  visibility: hidden !important;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-prev:after {
+  content: "prev";
+  visibility: hidden !important;
+}
+
+.swiper {
+  padding: 80px !important;
+
+}
+@media (max-width: 425px) {
+  ..swiper {
+    padding: 0px !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1!important;
+    background: #ffc736!important;
+}
+
+
 
 /*# sourceMappingURL=styles.css.map */
