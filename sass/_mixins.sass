@@ -35,7 +35,7 @@
 @mixin card-slide-general	
 	padding: 0px 0px 10px 0px
 	border-radius: 20px
-	background-color: #ffffff!important
+	width: 360px!important
 
 @mixin slide-show-desktop
 	margin-top: 5%
@@ -54,6 +54,15 @@
 	height: 60px
 	margin: 30px auto 0
 	transition: 150ms linear
+
+@mixin icon-next-lo
+	content: "\f138"    
+	font-size: 45px
+	color: #ffc736!important
+	box-shadow: 0 0 100px 80px #000
+	border-radius: 50%
+	transition: 150ms linear
+	font-weight: 900
 
 @mixin mobile
 	@media(max-width: 425px)

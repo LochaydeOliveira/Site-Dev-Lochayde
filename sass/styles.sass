@@ -122,9 +122,66 @@ body
 			background-color: #f8a916
 			
 
-	
 
-			
 
 .hidden-button-banner
 	visibility: hidden
+
+.fa-chevron-circle-left
+
+	&:before
+
+		.fa-circle-chevron-left
+			&:before
+				content: "\f137"
+				font-size: 45px
+				color: #ffc736 !important
+				box-shadow: 0 0 100px 80px #000
+				border-radius: 50%
+				transition: 150ms linear
+				font-weight: 900
+				margin: 0 0 0 50% !important
+
+.fa-chevron-circle-right
+
+	&:before
+
+		.fa-circle-chevron-left
+			&:before
+				content: "\f138"
+				font-size: 45px
+				color: #ffc736 !important
+				box-shadow: 0 0 100px 80px #000
+				border-radius: 50%
+				transition: 150ms linear
+				font-weight: 900
+
+.swiper-button-next
+
+	&:after
+
+		.swiper-rtl
+
+			.swiper-button-prev
+
+				&:after
+					content: 'next'
+					visibility: hidden !important
+
+
+.swiper-button-prev
+
+	&:after
+
+		.swiper-rtl
+
+			.swiper-button-prev
+
+				&:after
+
+					content: 'prev'
+					visibility: hidden !important
+
+.swiper
+
+	padding: 80px !important
