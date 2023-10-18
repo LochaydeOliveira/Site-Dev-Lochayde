@@ -1,5 +1,6 @@
 body {
-  background-color: #ffc736;
+  background: radial-gradient(circle, rgb(19, 11, 1) 0%, rgb(3, 6, 19) 99%) !important;
+  font-family: "Nunito Sans", -apple-system, blinkmacsystemfont, "Segoe UI", helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
 .header-main {
@@ -107,6 +108,53 @@ body {
     display: block;
     margin-bottom: 15%;
   }
+}
+
+.slide-container {
+  width: 100%;
+  max-width: 1200px;
+  background: none;
+  padding: 30px 20px;
+  margin: 0 auto 500px auto;
+}
+
+.card-slide {
+  padding: 0px 0px 10px 0px;
+  border-radius: 20px;
+  background-color: #ffffff !important;
+}
+.card-slide .card-body .info-purchase-price {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin: 0 0 -25px 0;
+  text-align: center;
+}
+.card-slide .card-body .card-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.card-slide img {
+  border-radius: 10px 10px 0 0;
+}
+
+.card {
+  border-radius: 20px !important;
+}
+.card button {
+  background-color: #ffc736;
+  color: #000;
+  width: 100%;
+  height: 60px;
+  margin: 30px auto 0;
+  transition: 150ms linear;
+}
+.card button:before {
+  content: "BAIXAR ESTA AULA";
+  font-size: 18px;
+  font-weight: 600;
+}
+.card button:hover {
+  background-color: #f8a916;
 }
 
 .hidden-button-banner {
