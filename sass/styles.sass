@@ -2,7 +2,9 @@
 @use 'mixins'
 
 body
-	background-color: variables.$secondary-color
+	background: variables.$background-dark-gradient
+	font-family: "Nunito Sans",-apple-system,blinkmacsystemfont,"Segoe UI",helvetica,arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"!important
+
 
 .header-main
 	background-color: variables.$black-color
@@ -78,8 +80,51 @@ body
 	@include mixins.mobile
 		@include mixins.slide-show-mobile
 
-		
+.slide-container
+	@include mixins.slide-container-general
 
+
+.card-slide
+
+	@include mixins.card-slide-general
+		
+	.card-body
+
+		.info-purchase-price
+			
+			font-size: 2.7rem
+			font-weight: 700
+			margin: 0 0 -25px 0
+			text-align: center
+		
+		.card-title
+			
+			font-size: 1.2rem
+			font-weight: 400	
+
+	img
+		border-radius: 10px 10px 0 0
+
+.card
+
+	border-radius: 20px!important
+	
+	button
+
+		@include mixins.button-primary-lc
+
+		&:before
+			content: "BAIXAR ESTA AULA"
+			font-size: 18px
+			font-weight: 600
+		
+		&:hover
+			background-color: #f8a916
+			
+
+	
+
+			
 
 .hidden-button-banner
 	visibility: hidden
