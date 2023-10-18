@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,200&family=Poppins:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+#body-main {
+  background: radial-gradient(circle, rgba(19,11,1,1) 0%, rgba(3,6,19,1) 99%);
+    font-family: "Nunito Sans",-apple-system,blinkmacsystemfont,"Segoe UI",helvetica,arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"!important;
+}
+
+.hidden-button-banner {
+  visibility: hidden;
+}
+
+.text-nav-link:hover {
+    transition: 300ms all;
+}
+
+.text-nav-link:hover {
+    color: #FFC736!important;
+}
+
+.fs-6 {
+    font-size: 14px!important;
+}
+
+.navbar-light .navbar-toggler {
+    color:  none;
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none!important;
+}
+
+.navbar-toggler:focus {
+    display: none!important;
+}
+
+.img-perfil {
+    border-radius: 50%;
+}
+
+.swiper-button-next:after {
+  content: "next";
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: "prev";
+}
+
+.hidden-icon {
+  visibility: hidden;
+}
+
+.title-cards {
+  font-size: 17px!important;
+  display: flex;
+  justify-content: center;
+
+}
+
+.card {
+  border-radius: 20px!important;
+}
+
+
+@media (max-width: 575.98px)  {
+
+  .title-cards {
+    font-size: 17px!important;
+    display: flex;
+    justify-content: center;
+  
+  }
+
+  .header-main {
+    display: flex;
+  } 
+  .info-purchase {
+    font-size: 25px;
+    margin: 0 20px 0 0;
+}
+
+.info-purchase-text {
+    color: #282c2f!important;
+    font-size: .75rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.info-purchase-price {
+  color: #000!important;
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 5px auto;
+}
+
+.btn-payment-color {
+    height: 50px;
+}
+
+.img-radius {
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+}
+
+.top-margin {
+    margin-top: 8.5rem!important;
+}
+
+
+  .slide-container {
+    max-width: 1320px;
+    width: 100%;
+    padding: 30px 50px;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+  .slide-content {
+    margin: 0 80px;
+    padding: 20px;
+  }
+
+  .card-slide {
+    width: 320px;
+ 
+  }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+.title-cards {
+  font-size: 17px!important;
+  display: flex;
+  justify-content: center;
+
+}
+
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    color: #ffc736;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: 'prev';
+  color: #fbc335;
+}
+  .header-main {
+    display: flex;
+  }
+  .info-purchase {
+    font-size: 25px;
+    margin: 0 20px 0 0;
+}
+
+.info-purchase-text {
+    color: #282c2f!important;
+    font-size: .75rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.info-purchase-price {
+  color: #000!important;
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 5px auto;
+}
+
+.btn-payment-color {
+    height: 50px;
+}
+
+.img-radius {
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+}
+
+.top-margin {
+    margin-top: 8.5rem!important;
+}
+
+
+  .slide-container {
+    max-width: 1320px;
+    width: 100%;
+    padding: 30px 50px;
+    margin: 100px auto;
+    background-color: transparent;
+  }
+  .slide-content {
+    margin: 0 80px;
+    padding: 35px 20px!important;
+  }
+
+  .card-slide {
+    width: 280px!important;
+  }
+
+  .font-size-footer {
+    font-size: 13px!important;
+    background-color: black;
+  }
+
+  .link-juridicos {
+    padding-bottom: 30px!important;
+    padding-top: 50px!important;
+  } 
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+.title-cards {
+  font-size: 17px!important;
+  display: flex;
+  justify-content: center;
+
+}
+
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    color: #fbc335;
+}
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    color: #ffc736;
+}
+  .header-main {
+    display: flex;
+    background-color: #000;
+    box-shadow: 0px 16px 20px 20px #b2955c24;
+  }
+  .info-purchase {
+    font-size: 25px;
+    margin: 0 20px 0 0;
+}
+
+.info-purchase-text {
+    color: #282c2f!important;
+    font-size: .75rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.info-purchase-price {
+  color: #000!important;
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 5px auto;
+}
+
+.btn-payment-custom {
+  height: 50px;
+  font-size: 18px!important;
+  background-color: #ffb900!important;
+  color: #000!important;
+  font-weight: 600!important;
+  transition: 150ms ease-in-out!important;
+}
+
+.btn-payment-custom:hover {
+  background-color: #ffaf1b!important;
+  transform: scale(1.02);
+}
+
+.img-radius {
+  border-top-left-radius: 20px!important;
+  border-top-right-radius: 20px!important;
+}
+
+.top-margin {
+    margin-top: 8.5rem!important;
+}
+
+
+  .slide-container {
+    max-width: 1320px;
+    width: 100%;
+    padding: 30px 50px;
+    margin: 100px auto;
+    background-color: transparent;
+  }
+  .slide-content {
+    margin: 0 80px;
+    padding: 50px 20px 96px 20px!important;
+  }
+
+  .card-slide {
+    width: 235px!important;
+    transform: scale(.98)!important;
+    max-height: 400px;
+    height: 100%!important;
+  }
+  .font-size-footer {
+    font-size: 13px!important;
+    background-color: black;
+    box-shadow: 1px -5px 14px 4px #5a441724;
+  }
+
+  .link-juridicos {
+    padding-bottom: 30px!important;
+    padding-top: 50px!important;
+  } 
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+.title-cards {
+  font-size: 17px!important;
+  display: flex;
+  justify-content: center;
+
+}
+  .swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: #f7b805;
+}
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    color: #fbc335;
+}
+  .header-main {
+    display: flex;
+    background-color: #000;
+    box-shadow: 0px 16px 20px 20px #b2955c24;
+  }
+  .info-purchase {
+    font-size: 25px;
+    margin: 0 20px 0 0;
+}
+
+.info-purchase-text {
+    color: #282c2f!important;
+    font-size: .75rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.info-purchase-price {
+  color: #000!important;
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 5px auto;
+}
+
+.btn-payment-custom {
+  height: 50px;
+  font-size: 18px!important;
+  background-color: #ffb900!important;
+  color: #000!important;
+  font-weight: 600!important;
+  transition: 150ms ease-in-out!important;
+}
+
+.btn-payment-custom:hover {
+  background-color: #ffaf1b!important;
+  transform: scale(1.02);
+}
+
+.img-radius {
+  border-top-left-radius: 20px!important;
+  border-top-right-radius: 20px!important;
+}
+
+.top-margin {
+    margin-top: 8.5rem!important;
+}
+
+.slide-container {
+  max-width: 1320px;
+  width: 100%;
+  padding: 30px 50px;
+  margin: 100px auto;
+  background-color: transparent;
+}
+.slide-content {
+  margin: 0 80px;
+  padding: 50px 20px 96px 20px!important;
+}
+
+.card-slide {
+  width: 280px!important;
+
+}
+.font-size-footer {
+  font-size: 13px!important;
+  background-color: black;
+  box-shadow: 1px -5px 14px 4px #5a441724;
+}
+
+.link-juridicos {
+  padding-bottom: 30px!important;
+  padding-top: 50px!important;
+} 
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: 'next';
+  color: #ffc736;
+}
+
+}
+
+
+@media (min-width: 1200px) {
+.title-cards {
+  font-size: 17px!important;
+  display: flex;
+  justify-content: center;
+
+}
+  .swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: #f7b805;
+}
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    color: #fbc335;
+}
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    color: #ffc736;
+}
+.header-main {
+  display: flex;
+  background-color: #000;
+  box-shadow: 0px 16px 20px 20px #b2955c24;
+}
+  .info-purchase {
+    font-size: 25px;
+    margin: 0 20px 0 0;
+}
+
+.info-purchase-text {
+    color: #282c2f!important;
+    font-size: .75rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.info-purchase-price {
+  color: #000!important;
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 5px auto;
+}
+
+.btn-payment-custom {
+  height: 50px;
+  font-size: 18px!important;
+  background-color: #ffb900!important;
+  color: #000!important;
+  font-weight: 600!important;
+  transition: 150ms ease-in-out!important;
+}
+
+.btn-payment-custom:hover {
+  background-color: #ffaf1b!important;
+  transform: scale(1.02);
+}
+
+.img-radius {
+  border-top-left-radius: 20px!important;
+  border-top-right-radius: 20px!important;
+}
+
+.top-margin {
+    margin-top: 8.5rem!important;
+}
+
+
+  .slide-container {
+    max-width: 1320px;
+    width: 100%;
+    padding: 30px 50px;
+    margin: 100px auto;
+    background-color: transparent;
+  }
+  .slide-content {
+    margin: 0 80px;
+    padding: 50px 20px 96px 20px!important;
+  }
+
+  .card-slide {
+    width: 378px!important;
+ 
+  }
+  .font-size-footer {
+    font-size: 13px!important;
+    background-color: black;
+    box-shadow: 1px -5px 14px 4px #5a441724;
+  }
+
+  .link-juridicos {
+    padding-bottom: 30px!important;
+    padding-top: 50px!important;
+  } 
+
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: #f7b805!important;
+}
+
+.swiper-pagination-bullet {
+  width: 15px!important;
+  height: 15px!important;
+  display: inline-block;
+  border-radius: var(--swiper-pagination-bullet-border-radius,50%);
+  background: var(--swiper-pagination-bullet-inactive-color,#f7b805)!important;
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom,10px);
+  top: var(--swiper-pagination-top,auto);
+  left: 0;
+  width: 100%;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #000!important;
+  text-decoration: none;
+  background-color: #ffc736!important;
+}
+
+.btn-check:focus+.btn, .btn:focus {
+  box-shadow: none!important;
+}
+

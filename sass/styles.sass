@@ -1,0 +1,70 @@
+@use 'variables'
+@use 'mixins'
+
+body
+	background-color: variables.$secondary-color
+
+.header-main
+	background-color: variables.$black-color
+	@include mixins.mobile
+		padding: 0 1rem
+
+.brand-logo
+	@include mixins.mobile
+		display: flex
+		width: 180px
+
+.nav
+	@include mixins.container
+	display: flex
+	justify-content: space-betweens
+
+	@include mixins.mobile
+		display: flex
+		justify-content: flex-start
+		flex-wrap: nowrap
+
+	.nav-item
+		a 
+			@include mixins.itens-navbar
+
+	i
+		color: variables.$secondary-color
+
+		&:hover
+			background-color: variables.$secondary-color
+			color: variables.$black-color
+		    
+
+	ul
+
+		.dropdown-item
+			color: variables.$text-color-gray		
+
+			&:hover
+				color: variables.$black-color
+				background-color: variables.$secondary-color
+
+
+.hidden-icon
+	display: none
+
+	@include mixins.mobile
+		display: block
+		font-size: 40px
+		
+.slide-show-desk
+	@include mixins.slide-show-desktop
+	@include mixins.mobile
+		display: none
+
+.slide-show-mobi
+	display: none	
+	@include mixins.mobile
+		@include mixins.slide-show-mobile
+
+		
+
+
+.hidden-button-banner
+	visibility: hidden
