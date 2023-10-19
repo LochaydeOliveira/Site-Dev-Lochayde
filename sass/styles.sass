@@ -1,187 +1,52 @@
 @use 'variables'
 @use 'mixins'
 
-body
-	background: variables.$background-dark-gradient
-	font-family: "Nunito Sans",-apple-system,blinkmacsystemfont,"Segoe UI",helvetica,arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"!important
 
+footer
+	@include mixins.footer-custom-lc
 
-.header-main
-	background-color: variables.$black-color
-	box-shadow: 0px 15px 20px 0px #ffc51852
+	div
+		hr
+			margin-bottom: 80px ! important
 
-	@include mixins.mobile    	
-		padding: 0 1rem
-		box-shadow: 0px 15px 20px 0px #ffc51852
+	.social-media
+		gap: 25px
+		justify-content: flex-end
 
-.brand-logo
-	@include mixins.mobile
+	.social-media-item
+		transition: 300ms all
+
+	svg
+		transition: 300ms all
+
+		&:hover
+			color: variables.$text-color-gray
+			transform: scale(1.2)
+
+	.link-juridicos
 		display: flex
-		width: 180px
+		align-items: center
+		gap: 30px
+		text-align: center
 
-#nav-desk
-	@include mixins.nav-block
-	@include mixins.mobile
-		@include mixins.nav-none
+		.link-juridicos-content
+			margin: 0 auto
+			
+			ul
+				display: flex
+				list-style: none
+				flex-wrap: wrap
+				justify-content: center
+				gap: 100px
 
-#nav-mobi
-	@include mixins.nav-none
-	@include mixins.mobile
-		@include mixins.nav-block
-
-.nav
-	@include mixins.container
+.bar-gradient-header
+	background: linear-gradient(140deg, rgba(255,193,7,1) 0%, rgba(174,109,11,1) 15%, rgba(55,35,5,1) 45%, rgba(78,11,11,1) 74%, rgba(3,6,19,1) 99%)
 	display: flex
-	justify-content: space-betweens
+	height: 4.5px
+	width: 100%	
 
-	@include mixins.mobile
-		display: flex
-		justify-content: flex-start
-		flex-wrap: nowrap
-
-	.nav-item
-		a
-			
-			@include mixins.itens-navbar
-		
-
-	i
-		color: variables.$secondary-color
-
-		&:hover
-			background-color: variables.$secondary-color
-			color: variables.$black-color
-		    
-
-	ul
-
-		.dropdown-item
-			color: variables.$text-color-gray		
-
-			&:hover
-				color: variables.$black-color
-				background-color: variables.$secondary-color
-
-
-.hidden-icon
-	display: none
-
-	@include mixins.mobile
-		display: block
-		font-size: 40px
-		
-.slide-show-desk
-	@include mixins.slide-show-desktop
-	@include mixins.mobile
-		display: none
-
-.slide-show-mobi
-	display: none	
-	@include mixins.mobile
-		@include mixins.slide-show-mobile
-
-.slide-container
-	@include mixins.slide-container-general
-
-
-.card-slide
-
-	@include mixins.card-slide-general
-		
-	.card-body
-
-		.info-purchase-price
-			
-			font-size: 2.7rem
-			font-weight: 700
-			margin: 0 0 -25px 0
-			text-align: center
-		
-		.card-title
-			
-			font-size: 1.2rem
-			font-weight: 400	
-
-	img
-		border-radius: 10px 10px 0 0
-
-.card
-
-	border-radius: 20px!important
-	
-	button
-
-		@include mixins.button-primary-lc
-
-		&:before
-			content: "BAIXAR ESTA AULA"
-			font-size: 18px
-			font-weight: 600
-		
-		&:hover
-			background-color: #f8a916
-			
-
-
-
-.hidden-button-banner
-	visibility: hidden
-
-.fa-chevron-circle-left
-
-	&:before
-
-		.fa-circle-chevron-left
-			&:before
-				content: "\f137"
-				font-size: 45px
-				color: #ffc736 !important
-				box-shadow: 0 0 100px 80px #000
-				border-radius: 50%
-				transition: 150ms linear
-				font-weight: 900
-				margin: 0 0 0 50% !important
-
-.fa-chevron-circle-right
-
-	&:before
-
-		.fa-circle-chevron-left
-			&:before
-				content: "\f138"
-				font-size: 45px
-				color: #ffc736 !important
-				box-shadow: 0 0 100px 80px #000
-				border-radius: 50%
-				transition: 150ms linear
-				font-weight: 900
-
-.swiper-button-next
-
-	&:after
-
-		.swiper-rtl
-
-			.swiper-button-prev
-
-				&:after
-					content: 'next'
-					visibility: hidden !important
-
-
-.swiper-button-prev
-
-	&:after
-
-		.swiper-rtl
-
-			.swiper-button-prev
-
-				&:after
-
-					content: 'prev'
-					visibility: hidden !important
-
-.swiper
-
-	padding: 80px !important
+.bar-gradient-footer
+	background: linear-gradient(-140deg, rgba(255,193,7,1) 0%, rgba(174,109,11,1) 15%, rgba(55,35,5,1) 45%, rgba(78,11,11,1) 74%, rgba(3,6,19,1) 99%)
+	display: flex
+	height: 4.5px
+	width: 100%
