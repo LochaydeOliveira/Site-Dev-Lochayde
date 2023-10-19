@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,200&family=Poppins:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&display=swap');
+
 body {
   background: radial-gradient(circle, rgb(19, 11, 1) 0%, rgb(3, 6, 19) 99%) !important;
-  font-family: "Nunito Sans", -apple-system, blinkmacsystemfont, "Segoe UI", helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  font-family: 'Montserrat', sans-serif!important;
 }
 
 .header-main {
@@ -127,20 +129,34 @@ body {
     bottom: 0;
 }
 
-.card-slide {
-  padding: 0px 0px 10px 0px;
-  border-radius: 20px;
-  width: 280px !important;
+
+@media (min-width: 425px) {
+  .card-slide {
+    padding: 0px 0px 10px 0px;
+    border-radius: 20px;
+    width: 280px !important;
+  }
 }
+
+@media (max-width: 425px) {
+  .card-slide {
+    padding: 0px 0px 10px 0px;
+    border-radius: 20px;
+  }
+  
+}
+
 .card-slide .card-body .info-purchase-price {
   font-size: 2.7rem;
   font-weight: 700;
   margin: 0 0 -25px 0;
   text-align: center;
 }
+
 .card-slide .card-body .card-title {
   font-size: 1.2rem;
   font-weight: 400;
+  text-align: center;
 }
 .card-slide img {
   border-radius: 10px 10px 0 0;
@@ -194,6 +210,15 @@ body {
   font-weight: 900;
 }
 
+@media (max-width: 425px) {
+  .fa-chevron-circle-right:before, .fa-circle-chevron-right:before {
+    box-shadow: none;
+  }
+  .fa-chevron-circle-left:before, .fa-circle-chevron-left:before {
+    box-shadow: none;
+  }
+}
+
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
   content: "next";
   visibility: hidden !important;
@@ -209,8 +234,8 @@ body {
 
 }
 @media (max-width: 425px) {
-  ..swiper {
-    padding: 0px !important;
+  .swiper {
+    padding: 50px 0px !important;
   }
 }
 
