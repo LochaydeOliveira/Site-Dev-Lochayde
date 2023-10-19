@@ -289,6 +289,11 @@ footer {
 footer div hr {
   margin-bottom: 80px !important;
 }
+@media (max-width: 425px) {
+  footer {
+    display: none!important;
+  }
+}
 
 .social-info {
   display: flex;
@@ -297,9 +302,14 @@ footer div hr {
 @media (max-width: 425px) {
   .social-info {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     gap: 30px;
+  }
+  .social-media {
+    align-items: center;
+    gap: 45px;
+    flex-direction: row;
   }
 }
 footer .social-media {
@@ -380,5 +390,47 @@ footer .link-juridicos .link-juridicos-content ul {
   width: 100%;
 }
 
+@media (max-width: 425px) {
+.bar-gradient-footer {
+  display: none;
+}
+.bar-gradient-footer-mobile {
+    background: linear-gradient(-140deg, rgb(255, 193, 7) 0%, rgb(174, 109, 11) 15%, rgb(55, 35, 5) 45%, rgb(78, 11, 11) 74%, rgb(3, 6, 19) 99%);
+    display: flex;
+    height: 4.5px;
+    width: 100%;
+  }
+  .bar-gradient-footer-mobile {
+    background: linear-gradient(-140deg, rgb(255, 193, 7) 0%, rgb(174, 109, 11) 15%, rgb(55, 35, 5) 45%, rgb(78, 11, 11) 74%, rgb(3, 6, 19) 99%);
+    display: flex;
+    height: 4.5px;
+    width: 100%;
+  }
+}
 
+.footer-collapse-mobile {
+  display: none;
+
+}
+
+@media (max-width: 425px) {
+  .footer-collapse-mobile {
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+  }
+
+}
+.btn--mobile{
+  display: flex;
+}
+.btn-collapse-mobile {
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+  color: #f5b30b!important;
+  margin: 0 auto;
+  background-color: #0e0e0e;
+  justify-content: center;
+}
 /*# sourceMappingURL=styles.css.map */
