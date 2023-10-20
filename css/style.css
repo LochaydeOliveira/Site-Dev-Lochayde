@@ -270,6 +270,13 @@ body {
 
 }
 @media (max-width: 425px) {
+  .slide-container {
+    width: 100%;
+    max-width: 1200px;
+    background: none;
+    padding: 30px 20px;
+    margin: 0px auto 80px;
+  } 
   .swiper {
     padding: 50px 0px !important;
   }
@@ -366,6 +373,20 @@ footer .link-juridicos .link-juridicos-content ul {
   gap: 50px;
 }
 @media (max-width: 425px) {
+  .link-juridicos {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .link-juridicos-content {
+    margin: 0 auto;
+    list-style: none;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+  }
   .links-comuns {
     padding: 10px;
     display: flex;
@@ -391,19 +412,23 @@ footer .link-juridicos .link-juridicos-content ul {
 }
 
 @media (max-width: 425px) {
+  .footer-inner-collapse-mobile {
+    display: flex;
+    position: absolute;
+  }
   .bar-gradient-footer {
     display: none;
   }
   .bar-gradient-negative-footer-mobile {
       background: linear-gradient(-140deg, rgb(255, 193, 7) 0%, rgb(174, 109, 11) 15%, rgb(55, 35, 5) 45%, rgb(78, 11, 11) 74%, rgb(3, 6, 19) 99%);
       display: flex;
-      height: 4.5px;
+      height: 2.5px;
       width: 100%;
   }
   .bar-gradient-positive-footer-mobile {
       background: linear-gradient(140deg, rgb(255, 193, 7) 0%, rgb(174, 109, 11) 15%, rgb(55, 35, 5) 45%, rgb(78, 11, 11) 74%, rgb(3, 6, 19) 99%);
       display: flex;
-      height: 4.5px;
+      height: 2.5px;
       width: 100%;
   }
 }
@@ -413,17 +438,28 @@ footer .link-juridicos .link-juridicos-content ul {
 
 }
 
+.footer-address {
+  display: none;
+}
 @media (max-width: 425px) {
   .footer-collapse-mobile {
     display: flex;
     color: #fff;
     flex-direction: column;
   }
+  .footer-address {
+    font-size: 0.7rem!important;
+    text-align: center;
+    padding: 32px!important;
+    margin: 0!important;
+  }
 
 }
+
 .btn--mobile{
   display: flex;
 }
+
 .btn-collapse-mobile {
   display: flex;
   width: 100%;
