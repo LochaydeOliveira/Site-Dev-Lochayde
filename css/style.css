@@ -441,6 +441,7 @@ footer .link-juridicos .link-juridicos-content ul {
 .footer-address {
   display: none;
 }
+
 @media (max-width: 425px) {
   .footer-collapse-mobile {
     display: flex;
@@ -452,6 +453,7 @@ footer .link-juridicos .link-juridicos-content ul {
     text-align: center;
     padding: 32px!important;
     margin: 0!important;
+    display: flex;
   }
 
 }
