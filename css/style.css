@@ -471,4 +471,28 @@ footer .link-juridicos .link-juridicos-content ul {
   background-color: #0e0e0e;
   justify-content: center;
 }
-/*# sourceMappingURL=styles.css.map */
+
+
+
+/* pagina Sobre - About  */
+.main-content-about {
+  margin: 200px 0 50px;
+}
+
+.about-container {
+  display: block;
+  margin: 75px auto 150px;
+  max-width: 850px;
+  color: #fff;
+  line-height: 2rem;
+}
+
+.about-content {
+  color: #fff;
+  line-height: 2rem;
+}
+
+.about-text {
+ display: block;
+}
+
