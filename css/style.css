@@ -490,6 +490,7 @@ footer .link-juridicos .link-juridicos-content ul {
 .about-content {
   color: #fff;
   line-height: 2rem;
+  text-align: justify;
 }
 
 .about-text {
