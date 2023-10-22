@@ -497,3 +497,26 @@ footer .link-juridicos .link-juridicos-content ul {
  display: block;
 }
 
+.contact-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle-section {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 10px;
+
+}
+
+.subtitle-section h2 {
+  color: #ffc736;
+  font-size: 1.3rem;
+}
+
+.contact-content {
+  width: 40%;
+}
+
