@@ -123,19 +123,19 @@ body {
   color: #fff;
   position: relative;
   max-width: max-content;
+  text-align: center;
 }
 
 
 .title-section::after {
   content: '';
   position: absolute;
-  top: 65px;
   background: linear-gradient(140deg, rgb(255, 193, 7) 0%, rgb(174, 109, 11) 15%, rgb(55, 35, 5) 45%, rgb(78, 11, 11) 74%, rgb(3, 6, 19) 99%);
   height: 5px;
   border-radius: 10px;
   width: 100%;
   max-width: 300px;
-  left: 0;
+  bottom: 0;
 }
 
 
@@ -474,12 +474,12 @@ footer .link-juridicos .link-juridicos-content ul {
 
 
 
-/* pagina Sobre - About  */
-.main-content-about {
+/* pagina Sobre - text-pages  */
+.main-content-text-pages {
   margin: 200px 0 50px;
 }
 
-.about-container {
+.text-pages-container {
   display: block;
   margin: 75px auto 150px;
   max-width: 850px;
@@ -487,13 +487,13 @@ footer .link-juridicos .link-juridicos-content ul {
   line-height: 2rem;
 }
 
-.about-content {
+.text-pages-content {
   color: #fff;
   line-height: 2rem;
   text-align: justify;
 }
 
-.about-text {
+.text-pages-text {
  display: block;
 }
 
