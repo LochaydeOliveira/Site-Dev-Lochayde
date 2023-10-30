@@ -322,19 +322,41 @@ footer div hr {
 
 .partner-companies {
   justify-content: flex-end;
+  flex-direction: row;
+}
+.partner-companies-itens {
+  display: flex;
   flex-direction: column;
+  border-right: 1px solid #444444e8;
+  padding: 0 60px;
 }
 .partner-companies h2 {
   color: #fff;
   font-size: 12px;
-  margin: 0;
+  margin: 5px 0;
 }
 .partner-companies-mobile {
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;
   margin: 30px 0 0;
+  gap: 30px;
 }
+@media (max-width: 425px) {
+  .partner-companies-itens {
+    display: flex;
+    flex-direction: column;
+    padding: 0 60px;
+    align-items: center;
+    border: none!important;
+  }
+  .partner-companies-mobile h2 {
+    color: #fff;
+    font-size: 12px;
+    margin: 0 0 7px 0!important;
+  } 
+}
+
 .partner-companies-mobile h2 {
   color: #fff;
   font-size: 12px;
