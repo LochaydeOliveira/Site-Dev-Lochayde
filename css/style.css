@@ -7,7 +7,6 @@ body {
 
 .header-main {
   background-color: #000;
-  box-shadow: 1px 20px 820px 100px rgb(42 34 8 / 60%);
 }
 @media (max-width: 425px) {
   .header-main {
@@ -304,7 +303,8 @@ footer div hr {
 
 .social-info {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 @media (max-width: 425px) {
   .social-info {
@@ -318,6 +318,27 @@ footer div hr {
     gap: 45px;
     flex-direction: row;
   }
+}
+
+.partner-companies {
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.partner-companies h2 {
+  color: #fff;
+  font-size: 12px;
+  margin: 0;
+}
+.partner-companies-mobile {
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin: 30px 0 0;
+}
+.partner-companies-mobile h2 {
+  color: #fff;
+  font-size: 12px;
+  margin: 0;
 }
 footer .social-media {
   gap: 25px;
@@ -491,6 +512,21 @@ footer .link-juridicos .link-juridicos-content ul {
   color: #fff;
   line-height: 2rem;
   text-align: justify;
+}
+
+@media (max-width: 425px) {
+.text-pages-content {
+  padding: 0 30px;
+}
+.contact-content {
+  width: 80%!important;
+}
+.subtitle-section h2 {
+  font-size: 15px!important;
+}
+.title-section h1 {
+  font-size: 20px;
+}
 }
 
 .text-pages-text {
