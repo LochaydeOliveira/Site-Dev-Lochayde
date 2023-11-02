@@ -5,6 +5,13 @@ body {
   font-family: 'Montserrat', sans-serif!important;
 }
 
+input::placeholder {
+  color: rgba(182, 182, 182, 0.507)!important;
+}
+textarea::placeholder {
+  color: rgba(182, 182, 182, 0.507)!important;
+}
+
 .header-main {
   background-color: #000;
 }
@@ -576,5 +583,12 @@ footer .link-juridicos .link-juridicos-content ul {
 
 .contact-content {
   width: 40%;
+  height: 100%;
+  max-height: 800px;
+  padding: 50px 25px;
+}
+
+.email-adress {
+  display: block;
 }
 
