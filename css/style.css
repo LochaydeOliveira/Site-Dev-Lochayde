@@ -98,7 +98,7 @@ textarea::placeholder {
 }
 
 .slide-show-desk {
-  margin-top: 5%;
+  margin-top: 6.7rem;
   display: block;
 }
 @media (max-width: 425px) {
