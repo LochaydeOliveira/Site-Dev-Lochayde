@@ -603,3 +603,43 @@ footer .link-juridicos .link-juridicos-content ul {
   display: block;
 }
 
+.presentation {
+  padding: 180px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.img-perfil {
+  width: 25%;
+  border-radius: 20px;
+}
+
+.presentation h1 {
+  color: #38acff;
+  font-size: 25px;
+}
+.presentation h2 {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 45px;
+  margin: 0 0 40px 0;
+}
+.presentation-texts {
+  padding: 0;
+}
+.my-services {
+  background: #fff;
+  margin: 0 0 2rem;
+}
+.my-partners h2 {
+  color: #ffffff;
+}
+.partners-p {
+  font-size: 20px;
+  font-style: italic;
+}
+.my-partners {
+  margin: 0 0 5rem;
+}
