@@ -502,8 +502,22 @@ footer .link-juridicos .link-juridicos-content ul {
   background-color: #38acff!important; 
 }
 
+#shopify-desktop {
+  display: flex;
+}
+#shopify-mobile {
+  display: none;
+}
 
 @media (max-width: 425px) {
+  #shopify-desktop {
+    display: none;
+  }
+  #shopify-mobile {
+    display: flex;
+    width: 100%;
+    border-radius: 20px;
+  }
   .footer-collapse-mobile {
     display: flex;
     color: #fff;
