@@ -624,13 +624,12 @@ footer .link-juridicos .link-juridicos-content ul {
 
 
 @media (min-width: 425px) {
-.presentation {
-  padding: 180px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  .presentation {
+    padding: 180px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
-
 .img-perfil {
   width: 25%;
   border-radius: 20px;
@@ -672,6 +671,7 @@ footer .link-juridicos .link-juridicos-content ul {
     padding: 130px 20px 20px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
   }
   .img-perfil {
     width: 90%;
