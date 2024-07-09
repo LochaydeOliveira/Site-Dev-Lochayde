@@ -665,6 +665,10 @@ footer .link-juridicos .link-juridicos-content ul {
 }
 }
 
+.img-suporte {
+  width: 700px;
+}
+
 @media (max-width: 425px) {
   .presentation {
     flex-direction: column-reverse;
@@ -687,7 +691,7 @@ footer .link-juridicos .link-juridicos-content ul {
   .presentation h2 {
     font-weight: 600;
     color: #ffffff;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 35px;
     margin: 0 0 20px 0;
   }
