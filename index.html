@@ -77,6 +77,7 @@
     </div>
     <img src="img/lochayde-oliveira-para-perfis.webp" class="img-perfil" alt="Imagem principal de perfil de Lochayde Oliveira">
 </div>
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="bootstrap" viewBox="0 0 118 94">
       <title>Bootstrap</title>
@@ -427,6 +428,55 @@
         </div>  
     </div>
 -->
+
+
+    <div id="suporte-dedicado" class="py-xl-5 bg-white mt-5">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-bold text-body-emphasis">SUPORTE DEDICADO<br> DE 7 DIAS</h1>
+        <p class="fs-2 text-body-secondary">Vou te ajudar a montar e<br>configurar sua loja na Shopify!</p>
+        </div>
+
+        
+        <div class="row row-cols-1 row-cols-md-3 mb-3 justify-content-around align-items-center">
+            <div class="col">
+                <div class="card-body">
+                    <img class="img-suporte" width="500" src="wp-content-suporte/uploads/2024/03/NICHADA-1-1024x712-1-768x534.png" alt="icone de loja virtual">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-body">
+                <h1 class="card-title pricing-card-title">R$ 129</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li><i class="bi bi-check-lg"></i> Grupo Exclusivo no WhatsApp</li>
+                    <li><i class="bi bi-check-lg"></i> Atendimento de Seg a Sex</li>
+                    <li><i class="bi bi-check-lg"></i> Atendimento das 09 às 17</li>
+                    <li><i class="bi bi-check-lg"></i> Direito a 2 Calls</li>
+                </ul>
+                <a href="https://pay.kiwify.com.br/5e5kY8I" target="_blank" class="w-100 btn btn-lg btn-primary">CONTRATAR</a>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="main-content-text-pages">
+        <div class="title-section">
+            <h1>PROMOÇÃO DA SHOPIFY</h1>
+        </div>
+     
+    
+        <div class="text-pages-container">
+            <div class="text-pages-content">
+                <p class="text-text-pages" style="display: flex;justify-content: center;">               
+                    <a href="https://shopify.pxf.io/3eggVv" target="_blank" id="1943124">
+                        <img id="shopify-desktop" src="img/promocional-shopify-banner-full.png" alt="Imagem promocional Shopify" width="1200" height="628"/>
+                        <img id="shopify-mobile" src="https://a.impactradius-go.com/display-ad/13624-1943099" width="150" height="250" alt="Imagem promocional Shopify"/>
+                    </a>
+                        <img height="0" width="0" src="https://imp.pxf.io/i/4940694/1943124/13624" style="position:absolute;visibility:hidden;" border="0" /> 
+                </p>     
+            </div>  
+        </div>
+    </div>
+
 </main>
 
 <div data-include-html="footer.html"></div>
@@ -580,6 +630,8 @@
     </span>
 </address> -->
 
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="js/script.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
@@ -609,8 +661,15 @@ prevEl: ".swiper-button-prev",
 });
 
 </script>
-<style>
-    
-</style>
+<script>
+        $(document).ready(function() {
+            $('.dropdown-item').click(function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $('#suporte').offset().top
+                }, 'slow');
+            });
+        });
+</script>
 </body>
 </html>
