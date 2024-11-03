@@ -11,12 +11,12 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
 
+      - name: Test message
+        run: echo "Workflow is running"
+
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          protocol: ftps  # Troque para "ftp" caso seu servidor não suporte FTPS
-          passive: true  # Ativa o modo passivo para evitar bloqueios de firewall
