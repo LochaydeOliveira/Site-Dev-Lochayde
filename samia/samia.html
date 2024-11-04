@@ -76,6 +76,39 @@
                 </div>
             </form>
         </div>
+        <div class="container mt-5 etapas-style">
+            <h2 class="d-flex justify-content-center pb-4">Fundo do Funil</h2>
+            <form id="bottomFunnelForm" class="d-flex flex-column gap-2">
+                <div class="form-group">
+                    <label for="purchases">Compras*</label>
+                    <input type="number" class="form-control" id="purchases">
+                </div>
+                <div class="form-group">
+                    <label for="revenue">Receita Total (R$)*</label>
+                    <input type="number" class="form-control" id="revenue" step="0.01">
+                </div>
+        
+                <div class="form-group">
+                    <label for="costPerPurchase">Custo por Compra (R$):</label>
+                    <input type="text" class="form-control" id="costPerPurchase" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="conversionRatePurchase">Taxa de Conversão de Compra (%):</label>
+                    <input type="text" class="form-control" id="conversionRatePurchase" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="revenuePerPurchase">Receita por Compra (R$):</label>
+                    <input type="text" class="form-control" id="revenuePerPurchase" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="roi">ROI (%):</label>
+                    <input type="text" class="form-control" id="roi" disabled>
+                </div>
+            </form>
+        </div>
+        
+        
+
     </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>

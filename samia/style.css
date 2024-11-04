@@ -10,8 +10,8 @@ body {
     display: flex;
     margin: 100px auto;
     width: 100%;
-    max-width: 800px;
-    gap: 20px;
+    max-width: 1000px;
+    gap: 5px;
 }
 
 .etapas-style {
