@@ -58,25 +58,21 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('paymentInfoConversionRate').value = paymentInfoConversionRate + '%';
     }
 
-    function calculateBottomFunnel() {
+    function calculateTopFunnel() {
         const valorUsado = parseFloat(valorUsadoElem.value) || 0;
-        const purchases = parseFloat(purchasesElem.value) || 0;
-        const revenue = parseFloat(revenueElem.value) || 0;
-
-        const clicks = parseFloat(document.getElementById('clicks').value) || 0;
-
-        const costPerPurchase = purchases > 0 ? valorUsado / purchases : 0;
-        document.getElementById('costPerPurchase').value = formatCurrency(costPerPurchase);
-
-        const conversionRatePurchase = clicks > 0 ? (purchases / clicks) * 100 : 0;
-        document.getElementById('conversionRatePurchase').value = conversionRatePurchase.toFixed(1) + '%';
-
-        const revenuePerPurchase = purchases > 0 ? revenue / purchases : 0;
-        document.getElementById('revenuePerPurchase').value = formatCurrency(revenuePerPurchase);
-
-        const roi = valorUsado > 0 ? ((revenue - valorUsado) / valorUsado) * 100 : 0;
-        document.getElementById('roi').value = roi.toFixed(1) + '%';
+        const cpm = parseFloat(cpmElem.value) || 0;
+        const ctr = parseFloat(ctrElem.value) / 100 || 0;
+    
+        const impressions = cpm > 0 ? (valorUsado * 1000) / cpm : 0; // Sem arredondamento
+        document.getElementById('impressions').value = Math.round(impressions);
+    
+        const clicks = impressions * ctr; // Sem arredondamento
+        document.getElementById('clicks').value = Math.round(clicks);
+    
+        const cpc = clicks > 0 ? valorUsado / clicks : 0;
+        document.getElementById('cpc').value = formatCurrency(cpc);
     }
+    
 
     if (valorUsadoElem) valorUsadoElem.addEventListener('input', () => {
         calculateTopFunnel();
