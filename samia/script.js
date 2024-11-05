@@ -5,25 +5,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartAdditionsElem = document.getElementById('cartAdditions');
     const initiatedCheckoutsElem = document.getElementById('initiatedCheckouts');
     const paymentInfosElem = document.getElementById('paymentInfos');
-    const purchasesElem = document.getElementById('purchases');
-    const revenueElem = document.getElementById('revenue');
+
+    // Função para formatar valores em reais
+    function formatCurrency(value) {
+        return value.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+            minimumFractionDigits: 2
+        });
+    }
+
+    // Função para arredondar valores para o inteiro mais próximo
+    function roundToNearestInteger(value) {
+        return Math.round(value);
+    }
 
     function calculateTopFunnel() {
         const valorUsado = parseFloat(valorUsadoElem.value) || 0;
         const cpm = parseFloat(cpmElem.value) || 0;
         const ctr = parseFloat(ctrElem.value) / 100 || 0;
 
-        // Calcula as impressões e arredonda para o inteiro mais próximo
-        const impressions = cpm > 0 ? Math.round((valorUsado * 1000) / cpm) : 0;
+        // Calcula as impressões e arredonda para o número inteiro mais próximo
+        const impressions = cpm > 0 ? roundToNearestInteger((valorUsado * 1000) / cpm) : 0;
         document.getElementById('impressions').value = impressions;
 
-        // Calcula os cliques e arredonda para o inteiro mais próximo
-        const clicks = Math.round(impressions * ctr);
+        // Calcula os cliques e arredonda para o número inteiro mais próximo
+        const clicks = roundToNearestInteger(impressions * ctr);
         document.getElementById('clicks').value = clicks;
 
-        // Calcula o CPC com duas casas decimais
+        // Calcula o custo por clique (CPC) e limita a 2 casas decimais
         const cpc = clicks > 0 ? (valorUsado / clicks).toFixed(2) : 0;
-        document.getElementById('cpc').value = cpc;
+        document.getElementById('cpc').value = formatCurrency(parseFloat(cpc));
     }
 
     function calculateMidFunnel() {
@@ -34,48 +46,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const clicks = parseFloat(document.getElementById('clicks').value) || 0;
 
-        const costPerInitiatedCheckout = initiatedCheckouts > 0 ? (valorUsado / initiatedCheckouts).toFixed(2) : 0;
-        document.getElementById('costPerInitiatedCheckout').value = costPerInitiatedCheckout;
+        // Calcula o custo por finalização de compra e formata como moeda BRL
+        const costPerInitiatedCheckout = initiatedCheckouts > 0 ? valorUsado / initiatedCheckouts : 0;
+        document.getElementById('costPerInitiatedCheckout').value = formatCurrency(costPerInitiatedCheckout);
 
-        const conversionRateInitiatedCheckout = clicks > 0 ? ((initiatedCheckouts / clicks) * 100).toFixed(1) : 0;
-        document.getElementById('conversionRateInitiatedCheckout').value = conversionRateInitiatedCheckout;
+        // Calcula a taxa de conversão de finalizações sem arredondar
+        const conversionRateInitiatedCheckout = clicks > 0 ? (initiatedCheckouts / clicks) * 100 : 0;
+        document.getElementById('conversionRateInitiatedCheckout').value = conversionRateInitiatedCheckout.toFixed(1) + '%';
 
-        const costPerPaymentInfo = paymentInfos > 0 ? (valorUsado / paymentInfos).toFixed(2) : 0;
-        document.getElementById('costPerPaymentInfo').value = costPerPaymentInfo;
+        // Calcula o custo por inclusão de pagamento e formata como moeda BRL
+        const costPerPaymentInfo = paymentInfos > 0 ? valorUsado / paymentInfos : 0;
+        document.getElementById('costPerPaymentInfo').value = formatCurrency(costPerPaymentInfo);
 
-        const paymentInfoConversionRate = initiatedCheckouts > 0 ? ((paymentInfos / initiatedCheckouts) * 100).toFixed(1) : 0;
-        document.getElementById('paymentInfoConversionRate').value = paymentInfoConversionRate;
+        // Calcula a taxa de conversão de pagamento e arredonda para cima
+        const paymentInfoConversionRate = initiatedCheckouts > 0 ? roundToNearestInteger((paymentInfos / initiatedCheckouts) * 100) : 0;
+        document.getElementById('paymentInfoConversionRate').value = paymentInfoConversionRate + '%';
     }
 
+    // Campos para o Fundo do Funil
+    const purchasesElem = document.getElementById('purchases');
+    const faturamentoTotalElem = document.getElementById('faturamentoTotal');
+
+    // Função para calcular os valores do Fundo do Funil
     function calculateBottomFunnel() {
         const valorUsado = parseFloat(valorUsadoElem.value) || 0;
-        const paymentInfos = parseFloat(paymentInfosElem.value) || 0;
         const purchases = parseFloat(purchasesElem.value) || 0;
-        const revenue = parseFloat(revenueElem.value) || 0;
+        const faturamentoTotal = parseFloat(faturamentoTotalElem.value) || 0;
 
-        const costPerPurchase = purchases > 0 ? (valorUsado / purchases).toFixed(2) : 0;
-        document.getElementById('costPerPurchase').value = costPerPurchase;
+        // Calcula o CPA (Custo por Aquisição)
+        const cpa = purchases > 0 ? valorUsado / purchases : 0;
+        document.getElementById('cpa').value = formatCurrency(cpa);
 
-        const conversionRatePurchase = paymentInfos > 0 ? ((purchases / paymentInfos) * 100).toFixed(1) : 0;
-        document.getElementById('conversionRatePurchase').value = conversionRatePurchase;
+        // Calcula o ROA (Retorno sobre Anúncios)
+        const roa = valorUsado > 0 ? (faturamentoTotal / valorUsado).toFixed(2) : 0;
+        document.getElementById('roa').value = roa;
 
-        const revenuePerPurchase = purchases > 0 ? (revenue / purchases).toFixed(2) : 0;
-        document.getElementById('revenuePerPurchase').value = revenuePerPurchase;
-
-        const roi = valorUsado > 0 ? ((revenue - valorUsado) / valorUsado).toFixed(2) : 0;
-        document.getElementById('roi').value = roi;
+        // Calcula o Ticket Médio
+        const ticketMedio = purchases > 0 ? faturamentoTotal / purchases : 0;
+        document.getElementById('ticketMedio').value = formatCurrency(ticketMedio);
     }
+
 
     if (valorUsadoElem) valorUsadoElem.addEventListener('input', () => {
         calculateTopFunnel();
         calculateMidFunnel();
-        calculateBottomFunnel();
     });
+    // Event listeners para atualizar os cálculos ao inserir novos valores no Fundo do Funil
+    if (valorUsadoElem) valorUsadoElem.addEventListener('input', calculateBottomFunnel);
+    if (purchasesElem) purchasesElem.addEventListener('input', calculateBottomFunnel);
+    if (faturamentoTotalElem) faturamentoTotalElem.addEventListener('input', calculateBottomFunnel);
     if (cpmElem) cpmElem.addEventListener('input', calculateTopFunnel);
     if (ctrElem) ctrElem.addEventListener('input', calculateTopFunnel);
     if (cartAdditionsElem) cartAdditionsElem.addEventListener('input', calculateMidFunnel);
     if (initiatedCheckoutsElem) initiatedCheckoutsElem.addEventListener('input', calculateMidFunnel);
     if (paymentInfosElem) paymentInfosElem.addEventListener('input', calculateMidFunnel);
-    if (purchasesElem) purchasesElem.addEventListener('input', calculateBottomFunnel);
-    if (revenueElem) revenueElem.addEventListener('input', calculateBottomFunnel);
 });
