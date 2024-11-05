@@ -3,111 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAMIA - Sistema de Análise de Métricas Interativa e Avançada</title>
+    <title>SAMIA</title>
+    <link rel="shortcut icon" href="img/Favicon sistema SAMIA v2.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 </head>
 <body>
 
-    <main class="main-style">
-
-        <div class="container mt-5 etapas-style">
-            <h2 class="d-flex justify-content-center pb-4">Topo do Funil</h2>
-            <form id="topFunnelForm" class="d-flex flex-column gap-2">
-                <div class="form-group">
-                    <label for="valorUsado">Valor Usado*</label>
-                    <input type="number" class="form-control" id="valorUsado">
-                </div>
-                <div class="form-group">
-                    <label for="cpm">CPM*</label>
-                    <input type="number" class="form-control" id="cpm">
-                </div>
-                <div class="form-group">
-                    <label for="ctr">CTR*</label>
-                    <input type="number" class="form-control" id="ctr">
-                </div>
-
-                <div class="form-group">
-                    <label for="impressions">Impressões:</label>
-                    <input type="text" class="form-control" id="impressions" disabled>
-                </div>
-                <div class="form-group">
-                    <label for="clicks">Cliques no Link:</label>
-                    <input type="text" class="form-control" id="clicks" disabled>
-                </div>
-                <div class="form-group">
-                    <label for="cpc">CPC:</label>
-                    <input type="text" class="form-control" id="cpc" disabled>
-                </div>
-            </form>
+        <div class="logo-style">
+            <img src="img/logo sistema SAMIA.png" alt="Logo do sistema SAMIA" width="250" height="60" loading="lazy">
         </div>
 
-        <div class="container mt-5 etapas-style">
-            <h2 class="d-flex justify-content-center pb-4">Meio do Funil</h2>
-            <form id="midFunnelForm" class="d-flex flex-column gap-2">
-                <div class="form-group">
-                    <label for="cartAdditions">Adições ao Carrinho*</label>
-                    <input type="number" class="form-control" id="cartAdditions">
-                </div>
-                <div class="form-group">
-                    <label for="initiatedCheckouts">Finalizações de Compras Iniciadas*</label>
-                    <input type="number" class="form-control" id="initiatedCheckouts">
-                </div>
-                <div class="form-group">
-                    <label for="paymentInfos">Inclusões de Forma de Pagamento*</label>
-                    <input type="number" class="form-control" id="paymentInfos">
-                </div>
+        <main class="main-style">
 
-                <div class="form-group">
-                    <label for="costPerInitiatedCheckout">Finalização de Compra Iniciada - Custo (R$):</label>
-                    <input type="text" class="form-control" id="costPerInitiatedCheckout" disabled>
-                </div>
-                <div class="form-group">
-                    <label for="conversionRateInitiatedCheckout">Conversão de Finalização Iniciada- Taxa (%):</label>
-                    <input type="text" class="form-control" id="conversionRateInitiatedCheckout" disabled>
-                </div>
-                <div class="form-group">
-                    <label for="costPerPaymentInfo">Inclusão de Infor. de Pag. - Custo (R$):</label>
-                    <input type="text" class="form-control" id="costPerPaymentInfo" disabled>
-                </div>
-                <div class="form-group">
-                    <label for="paymentInfoConversionRate">Conversão de Infor. de Pag. - Taxa (%):</label>
-                    <input type="text" class="form-control" id="paymentInfoConversionRate" disabled>
-                </div>
-            </form>
-        </div>
+            <div class="container mt-5 etapas-style">
+                <h2 class="d-flex justify-content-center pb-4">Topo do Funil</h2>
+                <form id="topFunnelForm" class="d-flex flex-column gap-2">
+                    <div class="form-group">
+                        <label for="valorUsado">Valor Usado*</label>
+                        <input type="number" class="form-control" id="valorUsado">
+                    </div>
+                    <div class="form-group">
+                        <label for="cpm">CPM*</label>
+                        <input type="number" class="form-control" id="cpm">
+                    </div>
+                    <div class="form-group">
+                        <label for="ctr">CTR*</label>
+                        <input type="number" class="form-control" id="ctr">
+                    </div>
 
-        <div class="container mt-5 etapas-style">
-            <h2 class="d-flex justify-content-center pb-4">Fundo do Funil</h2>
-        
-            <div class="form-group">
-                <label for="purchases">Compras*</label>
-                <input type="number" id="purchases" class="form-control">
+                    <div class="form-group">
+                        <label for="impressions">Impressões:</label>
+                        <input type="text" class="form-control" id="impressions" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="clicks">Cliques no Link:</label>
+                        <input type="text" class="form-control" id="clicks" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpc">CPC:</label>
+                        <input type="text" class="form-control" id="cpc" disabled>
+                    </div>
+                </form>
             </div>
-        
-            <div class="form-group">
-                <label for="faturamentoTotal">Faturamento Total (R$)*</label>
-                <input type="number" id="faturamentoTotal" class="form-control">
+
+            <div class="container mt-5 etapas-style">
+                <h2 class="d-flex justify-content-center pb-4">Meio do Funil</h2>
+                <form id="midFunnelForm" class="d-flex flex-column gap-2">
+                    <div class="form-group">
+                        <label for="cartAdditions">Adições ao Carrinho*</label>
+                        <input type="number" class="form-control" id="cartAdditions">
+                    </div>
+                    <div class="form-group">
+                        <label for="initiatedCheckouts">Finalizações de Compras Iniciadas*</label>
+                        <input type="number" class="form-control" id="initiatedCheckouts">
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentInfos">Inclusões de Forma de Pagamento*</label>
+                        <input type="number" class="form-control" id="paymentInfos">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="costPerInitiatedCheckout">Finalização de Compra Iniciada - Custo (R$):</label>
+                        <input type="text" class="form-control" id="costPerInitiatedCheckout" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="conversionRateInitiatedCheckout">Conversão de Finalização Iniciada- Taxa (%):</label>
+                        <input type="text" class="form-control" id="conversionRateInitiatedCheckout" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="costPerPaymentInfo">Inclusão de Infor. de Pag. - Custo (R$):</label>
+                        <input type="text" class="form-control" id="costPerPaymentInfo" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentInfoConversionRate">Conversão de Infor. de Pag. - Taxa (%):</label>
+                        <input type="text" class="form-control" id="paymentInfoConversionRate" disabled>
+                    </div>
+                </form>
             </div>
-        
-            <div class="form-group">
-                <label for="cpa">CPA*</label>
-                <input type="text" id="cpa" class="form-control" disabled>
+
+            <div class="container mt-5 etapas-style">
+                <h2 class="d-flex justify-content-center pb-4">Fundo do Funil</h2>
+            
+                <div class="form-group">
+                    <label for="purchases">Compras*</label>
+                    <input type="number" id="purchases" class="form-control">
+                </div>
+            
+                <div class="form-group">
+                    <label for="faturamentoTotal">Faturamento Total (R$)*</label>
+                    <input type="number" id="faturamentoTotal" class="form-control">
+                </div>
+            
+                <div class="form-group">
+                    <label for="cpa">CPA*</label>
+                    <input type="text" id="cpa" class="form-control" disabled>
+                </div>
+            
+                <div class="form-group">
+                    <label for="roa">ROAS</label>
+                    <input type="text" id="roa" class="form-control" disabled>
+                </div>
+            
+                <div class="form-group">
+                    <label for="ticketMedio">Ticket Médio</label>
+                    <input type="text" id="ticketMedio" class="form-control" disabled>
+                </div>
             </div>
-        
-            <div class="form-group">
-                <label for="roa">ROAS</label>
-                <input type="text" id="roa" class="form-control" disabled>
-            </div>
-        
-            <div class="form-group">
-                <label for="ticketMedio">Ticket Médio</label>
-                <input type="text" id="ticketMedio" class="form-control" disabled>
-            </div>
-        </div>
-        
-    </main>
+            
+        </main>
+
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="script.js"></script>    

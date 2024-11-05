@@ -21,12 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function calculateTopFunnel() {
-        const valorUsado = parseFloat(valorUsadoElem.value) || 0;
-        const cpm = parseFloat(cpmElem.value) || 0;
-        const ctr = parseFloat(ctrElem.value) / 100 || 0;
+        const valorUsado = parseFloat(valorUsadoElem.value.replace(',', '.')) || 0;
+        const cpm = parseFloat(cpmElem.value.replace(',', '.')) || 0;
+        const ctr = parseFloat(ctrElem.value.replace(',', '.')) / 100 || 0;
 
-        // Calcula as impressões e arredonda para o número inteiro mais próximo
-        const impressions = cpm > 0 ? roundToNearestInteger((valorUsado * 1000) / cpm) : 0;
+        // Calcula as impressões arredondando para cima
+        const impressions = cpm > 0 ? Math.ceil((valorUsado * 1000) / cpm) : 0; // Arredondando para cima
         document.getElementById('impressions').value = impressions;
 
         // Calcula os cliques e arredonda para o número inteiro mais próximo
@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function calculateMidFunnel() {
-        const valorUsado = parseFloat(valorUsadoElem.value) || 0;
-        const cartAdditions = parseFloat(cartAdditionsElem.value) || 0;
-        const initiatedCheckouts = parseFloat(initiatedCheckoutsElem.value) || 0;
-        const paymentInfos = parseFloat(paymentInfosElem.value) || 0;
+        const valorUsado = parseFloat(valorUsadoElem.value.replace(',', '.')) || 0;
+        const cartAdditions = parseFloat(cartAdditionsElem.value.replace(',', '.')) || 0;
+        const initiatedCheckouts = parseFloat(initiatedCheckoutsElem.value.replace(',', '.')) || 0;
+        const paymentInfos = parseFloat(paymentInfosElem.value.replace(',', '.')) || 0;
 
         const clicks = parseFloat(document.getElementById('clicks').value) || 0;
 
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Função para calcular os valores do Fundo do Funil
     function calculateBottomFunnel() {
-        const valorUsado = parseFloat(valorUsadoElem.value) || 0;
+        const valorUsado = parseFloat(valorUsadoElem.value.replace(',', '.')) || 0;
         const purchases = parseFloat(purchasesElem.value) || 0;
         const faturamentoTotal = parseFloat(faturamentoTotalElem.value) || 0;
 
@@ -86,13 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('ticketMedio').value = formatCurrency(ticketMedio);
     }
 
-
+    // Event listeners
     if (valorUsadoElem) valorUsadoElem.addEventListener('input', () => {
         calculateTopFunnel();
         calculateMidFunnel();
+        calculateBottomFunnel();
     });
-    // Event listeners para atualizar os cálculos ao inserir novos valores no Fundo do Funil
-    if (valorUsadoElem) valorUsadoElem.addEventListener('input', calculateBottomFunnel);
     if (purchasesElem) purchasesElem.addEventListener('input', calculateBottomFunnel);
     if (faturamentoTotalElem) faturamentoTotalElem.addEventListener('input', calculateBottomFunnel);
     if (cpmElem) cpmElem.addEventListener('input', calculateTopFunnel);
