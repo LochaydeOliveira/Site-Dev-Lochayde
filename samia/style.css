@@ -12,13 +12,14 @@ body::before {
     background-image: url(img/background-sistema-samia.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute; 
+    background-position: center;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.5; /* Altere esse valor para ajustar a opacidade (0.0 a 1.0) */
-    z-index: -1; /* Envia a imagem para o fundo */
+    opacity: 0.7;
+    z-index: -1;
 }
 
 
@@ -42,7 +43,7 @@ body::before {
     background: #fff;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0px 5px 20px 2px #00000014;
+    box-shadow: 2px 17px 20px -10px #4119ff3d;
 }
 
 .form-group label {
