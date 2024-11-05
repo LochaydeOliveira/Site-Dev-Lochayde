@@ -31,6 +31,14 @@ body::before {
     padding: 50px 0 0;
 }
 
+.description-tyle {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    padding: 2px;
+    font-weight: 300;
+}
+
 .main-style {
     display: flex;
     margin: 5px auto;
@@ -58,6 +66,15 @@ body::before {
     max-width: 1000px;
     gap: 5px;
 }
+
+.description-tyle {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    padding: 2px;
+    font-weight: 300;
+}
+
 }
 
 @media (max-width: 768px) {
@@ -68,6 +85,16 @@ body::before {
     flex-direction: column;
     padding: 15px;
 }
+.description-tyle {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    padding: 2px 45px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+}
+
 }
 
 @media (max-width: 576px) {
@@ -78,5 +105,16 @@ body::before {
     flex-direction: column;
     padding: 15px;
 }
+
+.description-tyle {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    padding: 2px 45px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+}
+
 
 } 
