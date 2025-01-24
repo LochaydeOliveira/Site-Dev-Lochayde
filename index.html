@@ -86,33 +86,22 @@
 
 
 </style>
-<body>
-<!-- <div data-include-html="header.html"></div> -->
 
 <body>
 
-    <header class="bg-light">
-        <nav class="navbar navbar-expand-lg navbar-light container">
-            <a class="navbar-brand" href="#">Lochayde Oliveira</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Política de Privacidade</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <div data-include-html="header.html"></div>
 
 
     <main class="container mt-4">
         <div class="row">
 
             <section class="col-lg-8">
+                <ul id="info-post" class="meta ospm-modern clr">
+                    <li class="meta-cat"> Top 10</li>
+                    <li class="meta-date"><span>| </span><i class=" far fa-calendar-alt" aria-hidden="true" role="img"></i> 24 de janeiro de 2025</li>
+                    <li class="meta-rt"><span>| </span> <i class=" fas fa-mug-hot" aria-hidden="true" role="img"></i> 3 minutos de leitura</li>
+                 </ul>
+
                 <img src="img/profissoes-escassas.jpg" alt="Profissões">
                 <article class="mb-4">
                     <h2 class="title-h2-post">10 Profissões Que Estão em Risco de Desaparecer em Breve</h2>
@@ -203,26 +192,38 @@
                 </article>
             </section>
 
-
             <aside class="col-lg-4">
-                <h3>Últimos Posts</h3>
+                <h3>Recomendações</h3>
                 <ul class="list-group">
-                    <li class="list-group-item"><a href="#">Post 1</a></li>
-                    <li class="list-group-item"><a href="#">Post 2</a></li>
-                    <li class="list-group-item"><a href="#">Post 3</a></li>
+                    <h4 style="color: #4b4b4b;font-size: 15px;font-weight: 600;">| Youtube</h4>
+                    <li class="list-group-item">
+                        <a href="https://www.youtube.com/watch?v=gJzp73vo71o" target="_blank">
+                            <img src="https://img.youtube.com/vi/gJzp73vo71o/mqdefault.jpg" alt="Os 3 Maiores Erros dos Empreendedores (Caio Carneiro e Flávio Augusto) | JOTA JOTA PODCAST #186" class="img-fluid">
+                            <p class="title-videos-aside">Os 3 Maiores Erros dos Empreendedores (Caio Carneiro e Flávio Augusto) | JOTA JOTA PODCAST #186</p>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.youtube.com/watch?v=DRgRNlGfaP4" target="_blank">
+                            <img src="https://img.youtube.com/vi/DRgRNlGfaP4/mqdefault.jpg" alt="O FIM DA GLOBO ESTÁ PRÓXIMO (prejuízos, demissões e audiência despencou)" class="img-fluid">
+                            <p class="title-videos-aside">O FIM DA GLOBO ESTÁ PRÓXIMO (prejuízos, demissões e audiência despencou)</p>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.youtube.com/watch?v=tx3B4QvTvg4" target="_blank">
+                            <img src="https://img.youtube.com/vi/tx3B4QvTvg4/mqdefault.jpg" alt="Este vídeo vai economizar ANOS da sua vida no YouTube" class="img-fluid">
+                            <p class="title-videos-aside">Este vídeo vai economizar ANOS da sua vida no YouTube</p>
+                        </a>
+                    </li>
                 </ul>
             </aside>
+
         </div>
     </main>
 
 
-    <footer class="bg-dark text-light text-center py-3 mt-4">
-        <p>&copy; 2025 Nome do Seu Site. Todos os direitos reservados.</p>
-    </footer>
-
+    <div data-include-html="footer.html"></div>
 </body>
 
-<!-- <div data-include-html="footer.html"></div> -->
 
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="js/script.js" ></script>
@@ -264,5 +265,7 @@ prevEl: ".swiper-button-prev",
             });
         });
 </script>
+
+
 </body>
 </html>

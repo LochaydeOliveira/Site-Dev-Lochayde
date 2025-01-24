@@ -5,6 +5,15 @@ body {
   font-family: Arial, Helvetica, sans-serif!important;
 }
 
+a { 
+  text-decoration: none!important;
+}
+
+a:hover { 
+  text-decoration: underline!important;
+  text-decoration-color: #99999a!important;
+}
+
 input::placeholder {
   color: rgba(182, 182, 182, 0.507)!important;
 }
@@ -714,3 +723,108 @@ footer .link-juridicos .link-juridicos-content ul {
   }
 }
 
+#navbarNav {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000!important;
+}
+
+#logo-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000!important;
+}
+
+#top-bar-wrap {
+  position: relative;
+  background-color: #fff;
+  font-size: 18px;
+  border-bottom: 1px solid #f1f1f1;
+  z-index: 101;
+}
+
+#top-bar {
+  padding: 8px 0;
+}
+
+#top-bar-inner {
+  position: relative;
+}
+
+#top-bar-social.top-bar-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 20px;
+  line-height: 20px;
+  margin-top: -10px;
+}
+
+#top-bar-content, #top-bar-social-alt {
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+#top-bar-content a {
+  color: #000000d1;
+  text-decoration: none;
+}
+
+.top-bar-left {
+  float: left;
+}
+
+.col:after, .clr:after, .group:after, dl:after, .left_float:after, .right_float:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  zoom: 1;
+  height: 0;
+}
+
+#top-bar-social.top-bar-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 20px;
+  line-height: 20px;
+  margin-top: -10px;
+}
+
+#wrap {
+  position: relative;
+}
+
+#top-bar-social ul {
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+  gap: 8px;
+  display: flex;
+}
+
+#top-bar-social li {
+  float: left;
+}
+
+#top-bar-social li a {
+  color: #000000d1;
+}
+
+.title-videos-aside {
+  color: #353535;
+  text-decoration: none!important;
+  line-height: 20px;
+  margin: 1rem 0;
+}
+
+#info-post {
+  display: flex;
+  font-size: 15px;
+  padding: 0;
+  gap: 10px;
+  list-style: none;
+  color: #353535;
+
+}
