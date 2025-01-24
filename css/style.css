@@ -135,7 +135,7 @@ textarea::placeholder {
   display: flex;
   margin: 0 auto;
   justify-content: center;
-  color: #fff;
+  color: #1d1d1d;
   position: relative;
   max-width: max-content;
   text-align: center;
@@ -506,7 +506,7 @@ footer .link-juridicos .link-juridicos-content ul {
 }
 
 .text-blue {
-  color: #38acff!important;
+  color: #313131!important;
 }
 
 .separador {
@@ -572,12 +572,12 @@ footer .link-juridicos .link-juridicos-content ul {
   display: block;
   margin: 75px auto 150px;
   max-width: 850px;
-  color: #fff;
+  color: #131313;
   line-height: 2rem;
 }
 
 .text-pages-content {
-  color: #fff;
+  color: #131313;
   line-height: 2rem;
   text-align: justify;
 }
@@ -616,7 +616,7 @@ footer .link-juridicos .link-juridicos-content ul {
 }
 
 .subtitle-section h2 {
-  color: #38acff;
+  color: #161616;
   font-size: 1.3rem;
 }
 
