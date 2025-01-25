@@ -828,3 +828,43 @@ footer .link-juridicos .link-juridicos-content ul {
   color: #3e3e3ed9;
 
 }
+
+
+.destaques h2 {
+  text-align: left!important;
+  font-size: 22px;
+  font-weight: 600;
+  background: #a90606;
+  padding: 0.8rem 1rem;
+  max-width: max-content;
+  color: #fff;
+  border-bottom: 1px solid #a90606;
+}
+
+.section-destaques {
+  margin: 0 0 8rem 0;
+}
+
+.hr-2 {
+  color: #a90606;
+  height: 1px;
+  margin: -1.5rem 0 2rem;
+  padding: 0;
+}
+
+.section-destaques a {
+  color: #333;
+  font-size: 25px;
+  font-weight: 600;
+  transition: all 300ms;
+}
+
+.section-destaques a:hover {
+  color: #a90606;
+  text-decoration: none!important;
+  font-size: 27px;
+}
+
+.section-destaques p {
+  color: #5f5f5fe6;
+}
