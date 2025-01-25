@@ -868,3 +868,27 @@ footer .link-juridicos .link-juridicos-content ul {
 .section-destaques p {
   color: #5f5f5fe6;
 }
+
+@media (max-width: 425px) {
+  .section-destaques img {
+    width: 100%;
+  }
+
+#info-post {
+  font-size: 11px;
+}
+
+#top-bar {
+  padding: 8px 1rem;
+}
+.content-destaques {
+  flex-direction: column;
+}
+
+.content-destaques h3 {
+  margin: 1.2rem 0 0.5rem!important;
+}
+
+}
+
+

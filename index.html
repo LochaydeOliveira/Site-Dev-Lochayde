@@ -23,7 +23,7 @@
     <link rel="shortcut icon" href="img/perfil lochayde oliveira.webp" type="image/x-icon">
 
 
-    <link rel="stylesheet" href="css/style.css?v=2.01">
+    <link rel="stylesheet" href="css/style.css?v=2.02">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -44,6 +44,18 @@
     color: #2f2f47;
 }
 
+.list-post-one-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    list-style: none;
+    margin: 0 0 4rem 0;
+}
+
+.list-post-one-2 strong {
+    color: #2f2f47;
+}
+
 .title-h2-post {
     margin: 2rem 0;
     font-size: 35px;
@@ -51,200 +63,256 @@
     font-weight: 600;
 }
 
+.article-text {
+        white-space: nowrap; /* Impede quebra de linha */
+        overflow: hidden; /* Oculta o excesso de texto */
+        text-overflow: ellipsis; /* Adiciona "..." ao final do texto */
+        display: block;
+        width: 100%;
+    }
+
+
+    #toggle-button {
+        display: inline-block;
+        background: none;
+        color: rgb(124, 32, 32);
+        border: none;
+        padding: 8px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+
+    #toggle-button:hover {
+        color: rgb(173, 39, 39) ;
+    }
+
+    .preview-text {
+        max-height: 670px; /* Altura inicial */
+        overflow: hidden;
+        position: relative;
+        transition: max-height 0.6s ease-in-out;
+    }
+
+    .hidden-text {
+        display: block;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.6s ease-in-out, max-height 0.6s ease-in-out;
+    }
+
+    .preview-text::after {
+        content: "..."; 
+        position: absolute;
+        bottom: -5px;
+        right: 10px;
+        background: white; 
+        padding-left: 5px;
+    }
 
 </style>
 
 <body>
-
     <div data-include-html="header.html"></div>
+        <div class="container">
 
-
-    <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/Banner Topo Atualizado.avif" class="d-block w-100" alt="Banner 1">
+            <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/Banner Topo Atualizado.avif" class="d-block w-100" alt="Banner 1">
+                    </div>
+                    <!-- <div class="carousel-item">
+                        <img src="img/banner2.jpg" class="d-block w-100" alt="Banner 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/banner3.jpg" class="d-block w-100" alt="Banner 3">
+                    </div> -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
             </div>
-            <!-- <div class="carousel-item">
-                <img src="img/banner2.jpg" class="d-block w-100" alt="Banner 2">
-            </div>
-            <div class="carousel-item">
-                <img src="img/banner3.jpg" class="d-block w-100" alt="Banner 3">
-            </div> -->
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Próximo</span>
-        </button>
-    </div>
 
 
-    <main class="container mt-4">
-        <div class="row">
+            <main class="container mt-4">
+                <div class="row">
 
-            <section class="col-lg-8">
-                <ul id="info-post" class="meta ospm-modern clr">
-                    <li class="meta-cat"> Top 10</li>
-                    <li class="meta-date"><span>| </span><i class=" far fa-calendar-alt" aria-hidden="true" role="img"></i> 24 de janeiro de 2025</li>
-                    <li class="meta-rt"><span>| </span> <i class=" fas fa-mug-hot" aria-hidden="true" role="img"></i> 3 minutos de leitura</li>
-                 </ul>
+                    <section class="col-lg-8">
+                        <ul id="info-post" class="meta ospm-modern clr">
+                            <li class="meta-cat"> Top 10</li>
+                            <li class="meta-date"><span>| </span><i class=" far fa-calendar-alt" aria-hidden="true" role="img"></i> 24 de janeiro de 2025</li>
+                            <li class="meta-rt"><span>| </span> <i class=" fas fa-mug-hot" aria-hidden="true" role="img"></i> 3 minutos de leitura</li>
+                        </ul>
 
-                <img src="img/profissoes-escassas.jpg" alt="Profissões">
-                <article class="mb-4">
-                    <h2 class="title-h2-post">10 Profissões Que Estão em Risco de Desaparecer em Breve</h2>
-                    <p>A evolução tecnológica e as mudanças no mercado de trabalho têm levado muitas profissões ao declínio. A automação, a inteligência artificial e a digitalização estão transformando diversos setores, tornando algumas carreiras obsoletas. Neste artigo, listamos 10 profissões que estão em risco de desaparecer nos próximos anos.</p>
-                        <ul class="list-post-one">
-                            <li>
-                               <strong>1. Operador de Telemarketing</strong> <br>
+                        <img src="img/profissoes-escassas.jpg" alt="Profissões" style="width: 100%;">
 
-                                Com o avanço dos chatbots e da automação no atendimento ao cliente, a profissão de operador de telemarketing está se tornando obsoleta. Muitas empresas já adotam assistentes virtuais para responder a dúvidas e solucionar problemas dos clientes.
+                       
+                        <article class="mb-4">
+                            <h2 class="title-h2-post">10 Profissões Que Estão em Risco de Desaparecer em Breve</h2>
+
+                            <div class="article-content">                        
+                                <div class="preview-text">
+                                    <p>
+                                        A evolução tecnológica e as mudanças no mercado de trabalho têm levado muitas profissões ao declínio.
+                                        A automação, a inteligência artificial e a digitalização estão transformando diversos setores, tornando algumas carreiras obsoletas.
+                                        Neste artigo, listamos 10 profissões que estão em risco de desaparecer nos próximos anos.
+                                    </p>
+                                
+                        
+                                    
+                                                <ul class="list-post-one">
+                                                    <li><strong>1. Operador de Telemarketing</strong> <br>
+                                                        Com o avanço dos chatbots e da automação no atendimento ao cliente, a profissão de operador de telemarketing está se tornando obsoleta. Muitas empresas já adotam assistentes virtuais para responder a dúvidas e solucionar problemas dos clientes.
+                                                    </li>
+                                                    <li><strong>2. Caixa de Supermercado</strong> <br>
+                                                        A popularização dos autocaixas e do pagamento por aplicativos está reduzindo a necessidade de operadores de caixa em supermercados e lojas de varejo. No futuro, as compras poderão ser feitas sem qualquer interação humana.                                
+                                                    </li>
+                                                    <li><strong>3. Agente de Viagens</strong> <br>
+                                                        Com a facilidade de reservar voos e hospedagens pela internet, a profissão de agente de viagens perdeu relevância. Plataformas como Booking.com e Expedia oferecem opções personalizadas e acessíveis para os viajantes.
+                                                    </li>
+                                                    <li><strong>4. Trabalhador de Fábrica</strong> <br>
+                                                        A robótica avançada e a impressão 3D estão substituindo mão de obra humana em muitas indústrias. Setores como o automobilístico e o eletrônico estão cada vez mais automatizados, reduzindo a necessidade de trabalhadores manuais.
+                                                    </li>
+                                                </ul>
+
+                                            <div class="hidden-text">
+                                                <ul class="list-post-one-2">
+                                                    <li><strong>5. Carteiro</strong> <br>
+                                                        Com a digitalização da comunicação e o declínio das correspondências físicas, o trabalho dos carteiros está diminuindo. O envio de cartas e documentos físicos foi amplamente substituído por e-mails e arquivos eletrônicos.
+                                                    </li>
+                                                    <li><strong>6. Bancário de Atendimento Presencial</strong><br>  
+                                                        Os bancos estão fechando agências e incentivando os clientes a utilizarem serviços digitais. O Internet Banking e os aplicativos financeiros têm reduzido a necessidade de atendentes bancários nas agências físicas.                       
+                                                    </li>
+                                                    <li><strong>7. Operador de Pedágio</strong> <br>
+                                                        Com a implantação de sistemas de cobrança automática, como o Sem Parar e outros modelos de pedágio eletrônico, a profissão de operador de pedágio tende a desaparecer.
+                                                    </li>
+                                                    <li><strong>8. Leitor de Medidores</strong><br>
+                                                        A automação de medidores de água, gás e eletricidade está eliminando a necessidade de profissionais que faziam leituras manuais. Agora, sensores transmitem os dados diretamente para as concessionárias.
+                                                    </li>
+                                                    <li><strong>9. Repórter de Jornal Impresso</strong> <br>
+                                                        O consumo de notícias migrou para o meio digital, reduzindo drasticamente a impressão de jornais físicos. Consequentemente, a demanda por repórteres especializados em impresso está caindo.
+                                                    </li>
+                                                    <li><strong>10. Trabalhador de Locadoras de Vídeo e DVD</strong><br>   
+                                                        Com os serviços de streaming dominando o mercado, locadoras de vídeo tornaram-se praticamente inexistentes. Plataformas como Netflix, Prime Video e Disney+ tornaram obsoleto o aluguel de filmes em formato físico.                              
+                                                    </li>
+                                                </ul>
+                                    
+                                                <p>
+                                                    <strong>Conclusão</strong><br>
+                                                    O futuro do mercado de trabalho está em constante transformação. Profissões tradicionais estão desaparecendo, enquanto novas carreiras surgem na área de tecnologia, dados e automação. Adaptar-se às mudanças e buscar capacitação em setores emergentes é essencial para manter a relevância no mercado de trabalho.
+                                                </p>
+                                            </div>
+                                </div>                             
+                            </div>
+                        
+                            <button id="toggle-button">Ler mais</button>
+                        </article>
+                        
+                        <script>
+                                document.getElementById("toggle-button").addEventListener("click", function () {
+                                    var preview = document.querySelector(".preview-text");
+                                    var hiddenText = document.querySelector(".hidden-text");
+
+                                    if (preview.classList.contains("expanded")) {
+                                        preview.style.maxHeight = "670px"; // Volta ao tamanho inicial
+                                        hiddenText.style.opacity = "0";
+                                        hiddenText.style.maxHeight = "0";
+                                        this.textContent = "Ler mais"; // Altera o botão de volta
+                                    } else {
+                                        preview.style.maxHeight = preview.scrollHeight + hiddenText.scrollHeight + "px"; // Expande completamente
+                                        hiddenText.style.opacity = "1";
+                                        hiddenText.style.maxHeight = hiddenText.scrollHeight + "px";
+                                        this.textContent = "Ler menos"; // Altera o botão
+                                    }
+
+                                    preview.classList.toggle("expanded");
+                                });
+
+                        </script>                 
+
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8313157699231074" crossorigin="anonymous"></script>
+                        <!-- anuncio-banner-horizontal -->
+                        <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-8313157699231074"
+                        data-ad-slot="6450653464"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+
+                    </section>
+
+                    <aside class="col-lg-4">
+                        <h3>Recomendações</h3>
+                        <ul class="list-group">
+                            <h4 style="color: #4b4b4b;font-size: 15px;font-weight: 600;">| Youtube</h4>
+                            <li class="list-group-item">
+                                <a href="https://www.youtube.com/watch?v=gJzp73vo71o" target="_blank">
+                                    <img src="https://img.youtube.com/vi/gJzp73vo71o/mqdefault.jpg" alt="Os 3 Maiores Erros dos Empreendedores (Caio Carneiro e Flávio Augusto) | JOTA JOTA PODCAST #186" class="img-fluid">
+                                    <p class="title-videos-aside">Os 3 Maiores Erros dos Empreendedores (Caio Carneiro e Flávio Augusto) | JOTA JOTA PODCAST #186</p>
+                                </a>
                             </li>
-                                
-                            <li>
-                              <strong>2. Caixa de Supermercado</strong>  <br>
-                                
-                                A popularização dos autocaixas e do pagamento por aplicativos está reduzindo a necessidade de operadores de caixa em supermercados e lojas de varejo. No futuro, as compras poderão ser feitas sem qualquer interação humana.                                
+                            <li class="list-group-item">
+                                <a href="https://www.youtube.com/watch?v=DRgRNlGfaP4" target="_blank">
+                                    <img src="https://img.youtube.com/vi/DRgRNlGfaP4/mqdefault.jpg" alt="O FIM DA GLOBO ESTÁ PRÓXIMO (prejuízos, demissões e audiência despencou)" class="img-fluid">
+                                    <p class="title-videos-aside">O FIM DA GLOBO ESTÁ PRÓXIMO (prejuízos, demissões e audiência despencou)</p>
+                                </a>
                             </li>
-
-                            <li>
-                               <strong>3. Agente de Viagens</strong> <br>
-                                
-                                Com a facilidade de reservar voos e hospedagens pela internet, a profissão de agente de viagens perdeu relevância. Plataformas como Booking.com e Expedia oferecem opções personalizadas e acessíveis para os viajantes.
-                                                              
-                            </li>
-
-                            <li>
-                               <strong>4. Trabalhador de Fábrica</strong> <br>
-                                
-                                A robótica avançada e a impressão 3D estão substituindo mão de obra humana em muitas indústrias. Setores como o automobilístico e o eletrônico estão cada vez mais automatizados, reduzindo a necessidade de trabalhadores manuais.
-                                
-                            </li>
-
-                            <li>
-                               <strong>5. Carteiro</strong> <br>
-                                
-                                Com a digitalização da comunicação e o declínio das correspondências físicas, o trabalho dos carteiros está diminuindo. O envio de cartas e documentos físicos foi amplamente substituído por e-mails e arquivos eletrônicos.
-                                                              
-                            </li>
-
-                            <li>
-                              <strong>6. Bancário de Atendimento Presencial</strong><br>  
-                                
-                                Os bancos estão fechando agências e incentivando os clientes a utilizarem serviços digitais. O Internet Banking e os aplicativos financeiros têm reduzido a necessidade de atendentes bancários nas agências físicas.                       
-                            </li>
-
-                            <li>
-                               <strong>7. Operador de Pedágio</strong> <br>
-                                
-                                Com a implantação de sistemas de cobrança automática, como o Sem Parar e outros modelos de pedágio eletrônico, a profissão de operador de pedágio tende a desaparecer.
-                                
-                            </li>
-
-                            <li>
-                              <strong> 8. Leitor de Medidores</strong><br>
-                                
-                                A automação de medidores de água, gás e eletricidade está eliminando a necessidade de profissionais que faziam leituras manuais. Agora, sensores transmitem os dados diretamente para as concessionárias.
-                                
-                            </li>
-
-                            <li>
-                               <strong>9. Repórter de Jornal Impresso</strong> <br>
-                                
-                                O consumo de notícias migrou para o meio digital, reduzindo drasticamente a impressão de jornais físicos. Consequentemente, a demanda por repórteres especializados em impresso está caindo.
-                                
-                            </li>
-
-                            <li>
-                             <strong>10. Trabalhador de Locadoras de Vídeo e DVD</strong><br>   
-                                
-                                Com os serviços de streaming dominando o mercado, locadoras de vídeo tornaram-se praticamente inexistentes. Plataformas como Netflix, Prime Video e Disney+ tornaram obsoleto o aluguel de filmes em formato físico.                              
+                            <li class="list-group-item">
+                                <a href="https://www.youtube.com/watch?v=tx3B4QvTvg4" target="_blank">
+                                    <img src="https://img.youtube.com/vi/tx3B4QvTvg4/mqdefault.jpg" alt="Este vídeo vai economizar ANOS da sua vida no YouTube" class="img-fluid">
+                                    <p class="title-videos-aside">Este vídeo vai economizar ANOS da sua vida no YouTube</p>
+                                </a>
                             </li>
                         </ul>
-                    <p>
-                        <strong>Conclusão</strong><br>                        
-                                
-                        O futuro do mercado de trabalho está em constante transformação. Profissões tradicionais estão desaparecendo, enquanto novas carreiras surgem na área de tecnologia, dados e automação. Adaptar-se às mudanças e buscar capacitação em setores emergentes é essencial para manter a relevância no mercado de trabalho.</li>
-                    
-                    </p>
+                    </aside>
 
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8313157699231074"
-                    crossorigin="anonymous"></script>
-               <!-- anuncio-banner-horizontal -->
-               <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-8313157699231074"
-                    data-ad-slot="6450653464"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-               <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-               </script>
-                </article>
-            </section>
+                </div>
 
-            <aside class="col-lg-4">
-                <h3>Recomendações</h3>
-                <ul class="list-group">
-                    <h4 style="color: #4b4b4b;font-size: 15px;font-weight: 600;">| Youtube</h4>
-                    <li class="list-group-item">
-                        <a href="https://www.youtube.com/watch?v=gJzp73vo71o" target="_blank">
-                            <img src="https://img.youtube.com/vi/gJzp73vo71o/mqdefault.jpg" alt="Os 3 Maiores Erros dos Empreendedores (Caio Carneiro e Flávio Augusto) | JOTA JOTA PODCAST #186" class="img-fluid">
-                            <p class="title-videos-aside">Os 3 Maiores Erros dos Empreendedores (Caio Carneiro e Flávio Augusto) | JOTA JOTA PODCAST #186</p>
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://www.youtube.com/watch?v=DRgRNlGfaP4" target="_blank">
-                            <img src="https://img.youtube.com/vi/DRgRNlGfaP4/mqdefault.jpg" alt="O FIM DA GLOBO ESTÁ PRÓXIMO (prejuízos, demissões e audiência despencou)" class="img-fluid">
-                            <p class="title-videos-aside">O FIM DA GLOBO ESTÁ PRÓXIMO (prejuízos, demissões e audiência despencou)</p>
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://www.youtube.com/watch?v=tx3B4QvTvg4" target="_blank">
-                            <img src="https://img.youtube.com/vi/tx3B4QvTvg4/mqdefault.jpg" alt="Este vídeo vai economizar ANOS da sua vida no YouTube" class="img-fluid">
-                            <p class="title-videos-aside">Este vídeo vai economizar ANOS da sua vida no YouTube</p>
-                        </a>
-                    </li>
-                </ul>
-            </aside>
+
+                <section class="container mt-4 destaques">
+                    <h2 class="text-center mb-4">Destaques</h2>
+                    <hr class="hr-2">
+                    <div class="row section-destaques">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-start content-destaques">
+                                <img src="https://www.blogson.com.br/wp-content/uploads/2020/12/asso-a-passo-para-se-adequar-a-lgpd1-300x200.jpeg" alt="Imagem destaque 1" class="img-fluid me-3" width="250">
+                                <div>
+                                    <h3><a href="#" class="text-decoration-none">Política de Privacidade Gerada On-line e Gratuita</a></h3>
+                                    <p>IMPORTANTE! O conteúdo deste artigo tem o propósito de apenas familiarizar o leitor com os conceitos mais elementares e introdutórios de...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-start content-destaques">
+                                <img src="https://www.blogson.com.br/wp-content/uploads/2020/04/curso-wordpress-gratuito-na-udemy-300x169.png" alt="Imagem destaque 2" class="img-fluid me-3" width="280">
+                                <div>
+                                    <h3><a href="#" class="text-decoration-none">Curso Gratuito de WordPress</a></h3>
+                                    <p>Aqueles que me conhecem, sabem que anualmente realizo na Etec de Atibaia o curso intensivo de WordPress. Neste ano, em...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
 
         </div>
-
-
-        <section class="container mt-4 destaques">
-            <h2 class="text-center mb-4">Destaques</h2>
-            <hr class="hr-2">
-            <div class="row section-destaques">
-                <div class="col-md-6">
-                    <div class="d-flex align-items-start">
-                        <img src="https://www.blogson.com.br/wp-content/uploads/2020/12/asso-a-passo-para-se-adequar-a-lgpd1-300x200.jpeg" alt="Imagem destaque 1" class="img-fluid me-3" width="250">
-                        <div>
-                            <h3><a href="#" class="text-decoration-none">Política de Privacidade Gerada On-line e Gratuita</a></h3>
-                            <p>IMPORTANTE! O conteúdo deste artigo tem o propósito de apenas familiarizar o leitor com os conceitos mais elementares e introdutórios de...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="d-flex align-items-start">
-                        <img src="https://www.blogson.com.br/wp-content/uploads/2020/04/curso-wordpress-gratuito-na-udemy-300x169.png" alt="Imagem destaque 2" class="img-fluid me-3" width="280">
-                        <div>
-                            <h3><a href="#" class="text-decoration-none">Curso Gratuito de WordPress</a></h3>
-                            <p>Aqueles que me conhecem, sabem que anualmente realizo na Etec de Atibaia o curso intensivo de WordPress. Neste ano, em...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
     <div data-include-html="footer.html"></div>
 </body>
 
