@@ -1,8 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,200&family=Poppins:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&display=swap');
+.poppins-thin {
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
 
 body {
   background: #ffffff!important;
-  font-family: Arial, Helvetica, sans-serif!important;
+  font-family: "Poppins", serif!important;
+}
+
+p {
+  color: #333!important;
 }
 
 a { 
@@ -404,10 +515,18 @@ footer div hr {
   left: 5px;
 }
 
+.h3-bloco {
+  margin: 5rem 0 1.5rem;
+  font-size: 25px;
+  font-weight: 800;
+  font-family: "Poppins", serif;
+}
+
 .social-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "p";
 }
 
 @media (max-width: 425px) {
@@ -931,12 +1050,23 @@ footer .link-juridicos .link-juridicos-content ul {
   border-bottom: 1px solid #a90606;
 }
 
+.destaques2 h2 {
+  text-align: left!important;
+  font-size: 22px;
+  font-weight: 600;
+  background: #132aff;
+  padding: 0.8rem 1rem;
+  max-width: max-content;
+  color: #fff;
+  border-bottom: 1px solid #132aff;
+}
+
 .section-destaques {
   margin: 0 0 8rem 0;
 }
 
-.hr-2 {
-  color: #a90606;
+.hr2-2 {
+  color: #132aff;
   height: 1px;
   margin: -1.5rem 0 2rem;
   padding: 0;
@@ -952,7 +1082,7 @@ footer .link-juridicos .link-juridicos-content ul {
 .section-destaques a:hover {
   color: #a90606;
   text-decoration: none!important;
-  font-size: 27px;
+  font-size: 25.5px;
 }
 
 .section-destaques p {
