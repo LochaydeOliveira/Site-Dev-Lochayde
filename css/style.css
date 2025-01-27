@@ -311,8 +311,97 @@ footer div hr {
 }
 @media (max-width: 425px) {
   footer {
-    display: none!important;
+    display: block!important;
+    padding: 2rem 1rem;
   }
+
+  .col-content {
+    margin: 2rem 0;
+    text-align: center!important;
+  }
+
+  .col-content h5 {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .col-content i {
+    font-size: 25px;
+    color: #a3a3a3 !important;
+  }
+  
+
+}
+
+.col-content h5 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.col-content ul {
+    padding: 0;
+}
+
+
+.col-content i {
+  font-size: 25px;
+  color: #a3a3a3 !important;
+}
+
+.col-content a {
+  color: #a3a3a3 !important;
+}
+
+.right-reserved {
+  background: #000;
+  margin: 0!important;
+  padding: 10px;
+  color: #5a5757;
+  font-size: 15px;
+}
+
+
+.ads-shopee img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.ads-shopee:hover img {
+  transform: scale(1.05);
+  overflow: hidden;
+} 
+
+.list-group-item {  
+  position: relative; 
+}
+
+.ads-shopee {
+  position: relative;
+  width: 100%;
+  height: auto; /* Ajuste conforme necessário */
+}
+
+.item-ads-shopee {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  overflow: hidden;
+  border: 1px solid #878787ab;
+}
+
+.item-ads-shopee.active {
+  opacity: 1;
+}
+.h4-ads {
+  color: #4b4b4b;
+  font-size: 15px;
+  font-weight: 600;
+  position: relative;
+  z-index: 9;
+  top: 30px;
+  left: 5px;
 }
 
 .social-info {
@@ -320,6 +409,7 @@ footer div hr {
   justify-content: space-between;
   align-items: center;
 }
+
 @media (max-width: 425px) {
   .social-info {
     display: flex;

@@ -127,7 +127,7 @@
 <body>
     <div data-include-html="header.html"></div>
         <div class="container">
-
+            <!-- 
             <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -138,12 +138,12 @@
                     <div class="carousel-item active">
                         <img src="img/Banner Topo Atualizado.avif" class="d-block w-100" alt="Banner 1">
                     </div>
-                    <!-- <div class="carousel-item">
+                    <div class="carousel-item">
                         <img src="img/banner2.jpg" class="d-block w-100" alt="Banner 2">
                     </div>
                     <div class="carousel-item">
                         <img src="img/banner3.jpg" class="d-block w-100" alt="Banner 3">
-                    </div> -->
+                    </div> 
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -154,6 +154,7 @@
                     <span class="visually-hidden">Próximo</span>
                 </button>
             </div>
+            -->
 
 
             <main class="container mt-4">
@@ -289,6 +290,25 @@
                                 </a>
                             </li>
                         </ul>
+
+                        <ul class="list-group ads-shopee">
+                            <h4 class="h4-ads">Ads</h4>
+                            <li class="item-ads-shopee">
+                                <a href="https://s.shopee.com.br/2fvpw635Na" target="_blank">
+                                    <img src="img/ads/smartwatchs.webp" alt="I9 T900 Ultra Max Smart Watch 2.19 Tela HD Função Nfc Monitoramento de saúde" class="img-fluid">
+                                </a>
+                            </li>
+                            <li class="item-ads-shopee">
+                                <a href="https://s.shopee.com.br/4fguT0jzo6" target="_blank">
+                                    <img src="img/ads/Fones de ouvido Air Pro6 TWS-Bluetooth 5 - editada.png" alt="Fones de ouvido Air Pro6 TWS-Bluetooth 5" class="img-fluid">
+                                </a>
+                            </li>
+                            <li class="item-ads-shopee">
+                                <a href="https://s.shopee.com.br/4fguT0jzo6" target="_blank">
+                                    <img src="img/ads/Fones de ouvido Air Pro6 TWS-Bluetooth 5 - Fone.webp" alt="Fones de ouvido Air Pro6 TWS-Bluetooth 5" class="img-fluid">
+                                </a>
+                            </li>
+                        </ul>
                     </aside>
 
                 </div>
@@ -331,6 +351,25 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 <script src="swiper/swiper-bundle.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let items = document.querySelectorAll(".item-ads-shopee");
+        let index = 0;
+
+        function showNextItem() {
+            items.forEach(item => item.classList.remove("active"));
+            items[index].classList.add("active");
+
+            index = (index + 1) % items.length;
+
+            setTimeout(showNextItem, 4000);
+        }
+
+        // Inicializa a primeira imagem visível
+        items[0].classList.add("active");
+        setTimeout(showNextItem, 4000);
+    });
+</script>
 
 </body>
 </html>
