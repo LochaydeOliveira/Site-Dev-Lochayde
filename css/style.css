@@ -969,7 +969,6 @@ footer .link-juridicos .link-juridicos-content ul {
 
 #top-bar-social.top-bar-right {
   position: absolute;
-  left: 5.5%;
   top: 50%;
   height: 20px;
   line-height: 20px;
@@ -1133,3 +1132,4 @@ footer .link-juridicos .link-juridicos-content ul {
   border-color: #9a6f12!important;
   box-shadow: 0 0 0 3px #9a6f1240 !important;
 }
+

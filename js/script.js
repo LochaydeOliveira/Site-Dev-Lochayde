@@ -10,7 +10,7 @@ function includeHTML() {
         .then(data => {
           el.innerHTML = data;
           el.removeAttribute("data-include-html");
-          // Re-execute this function to include any nested includes
+
           includeHTML();
         })
         .catch(error => {
@@ -20,11 +20,6 @@ function includeHTML() {
     });
   }
   
-  // Call the function to include the content
   document.addEventListener("DOMContentLoaded", function() {
     includeHTML();
   });
-
-
-
-  

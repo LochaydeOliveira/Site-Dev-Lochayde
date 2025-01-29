@@ -1,40 +1,3 @@
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const searchForm = document.getElementById("search-form");
-    const searchInput = document.getElementById("search-input");
-
-    if (!searchForm || !searchInput) {
-        console.error("Erro: Elemento de busca não encontrado!");
-        return;
-    }
-
-    searchForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const query = searchInput.value.toLowerCase();
-        fetch("posts.json")
-            .then(response => response.json())
-            .then(posts => {
-                const results = posts.filter(post =>
-                    post.title.toLowerCase().includes(query) ||
-                    post.description.toLowerCase().includes(query)
-                );
-                displayResults(results);
-            })
-            .catch(error => console.error("Erro ao carregar os posts:", error));
-    });
-
-    function displayResults(results) {
-        let resultsHtml = '<h3>Resultados:</h3><ul>';
-        results.forEach(post => {
-            resultsHtml += `<li><a href="${post.url}">${post.title}</a></li>`;
-        });
-        resultsHtml += '</ul>';
-        document.getElementById("search-results").innerHTML = resultsHtml;
-    }
-});
-
-</script>
-
 <div id="top-bar-wrap" class="clr">
     <div id="top-bar" class="clr container">
         <div id="top-bar-inner" class="clr">
@@ -70,17 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 </ul>
             </div>
 
-
-            <div id="top-bar-search" class="clr has-content">
-                <form id="search-form" class="d-flex">
-                    <input id="search-input" class="form-control me-2" type="search" placeholder="Buscar no site..." aria-label="Pesquisar">
-                    <button class="btn btn-primary" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>                                                
-            </div>
-
-
         </div>
     </div>
 </div>
@@ -88,7 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <header class="bg-light"> 
     <nav class="navbar navbar-expand-lg navbar-light container">
-        <a id="logo-text" class="navbar-brand text-uppercase" href="https://lochaydeoliveira.com.br"><img src="img/logo blog.png" alt="logo atual do blog"></a>
+        <a id="logo-text" class="navbar-brand text-uppercase" href="https://lochaydeoliveira.com.br">
+            <img src="img/logo blog.png" alt="logo atual do blog">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -101,15 +55,24 @@ document.addEventListener("DOMContentLoaded", function() {
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="o-que-e-hifi.html">O que é HIFI?</a></li>
+                        <li><a class="dropdown-item" href="10-profissoes-que-estao-em-risco-de-desaparecer-em-breve.html">10 Profissões Que Estão em Risco de Desaparecer em Breve</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sobre
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="sobre.html">Sobre Mim</a></li>
+                        <li><a class="dropdown-item" href="termos-de-uso.html">Termos de Uso</a></li>
+                        <li><a class="dropdown-item" href="politica-de-privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-                <li class="nav-item"><a class="nav-link" href="politica-de-privacidade.html">Política de Privacidade</a></li>
-
-
 
             </ul>
         </div>
     </nav>
 </header>
+
+<script src="js/script.js"></script>
