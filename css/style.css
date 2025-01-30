@@ -1106,6 +1106,10 @@ footer .link-juridicos .link-juridicos-content ul {
 }
 
 @media (max-width: 425px) {
+  .dropdown-menu {
+    max-width: 22rem;
+    overflow: scroll;
+  }
   .section-destaques img {
     width: 100%;
   }
@@ -1200,7 +1204,3 @@ footer .link-juridicos .link-juridicos-content ul {
   background: #fff;
 }
 
-.dropdown-menu {
-  max-width: 22rem;
-  overflow: scroll;
-}
