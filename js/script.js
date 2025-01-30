@@ -23,3 +23,21 @@ function includeHTML() {
   document.addEventListener("DOMContentLoaded", function() {
     includeHTML();
   });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    let items = document.querySelectorAll(".item-ads-shopee");
+    let index = 0;
+
+    function showNextItem() {
+        items.forEach(item => item.classList.remove("active"));
+        items[index].classList.add("active");
+
+        index = (index + 1) % items.length;
+
+        setTimeout(showNextItem, 4000);
+    }
+
+    items[0].classList.add("active");
+    setTimeout(showNextItem, 4000);
+});

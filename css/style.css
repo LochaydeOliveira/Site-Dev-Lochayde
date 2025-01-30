@@ -501,14 +501,20 @@ footer div hr {
   left: 0;
   width: 100%;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 0s linear 1s;
   overflow: hidden;
   border: 1px solid #878787ab;
+  z-index: 0;
 }
 
 .item-ads-shopee.active {
   opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  transition: opacity 1s ease-in-out, visibility 0s linear 0s;
 }
+
 .h4-ads {
   color: #4b4b4b;
   font-size: 15px;
