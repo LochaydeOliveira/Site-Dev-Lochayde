@@ -1202,5 +1202,5 @@ footer .link-juridicos .link-juridicos-content ul {
 
 .dropdown-menu {
   max-width: 22rem;
-  overflow: hidden;
+  overflow: scroll;
 }
