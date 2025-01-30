@@ -92,25 +92,6 @@
         width: 100%;
     }
 
-
-    #toggle-button {
-        display: inline-block;
-        background: none;
-        color: rgb(124, 32, 32);
-        border: none;
-        padding: 8px 16px;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-top: 10px;
-        text-decoration: underline;
-        font-weight: 600;
-    }
-
-    #toggle-button:hover {
-        color: rgb(173, 39, 39) ;
-    }
-
     .preview-text {
         max-height: 670px; /* Altura inicial */
         overflow: hidden;
@@ -140,35 +121,6 @@
 <body>
     <div data-include-html="header.html"></div>
         <div class="container">
-            <!-- 
-            <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/img/Banner Topo Atualizado.avif" class="d-block w-100" alt="Banner 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/banner2.jpg" class="d-block w-100" alt="Banner 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/banner3.jpg" class="d-block w-100" alt="Banner 3">
-                    </div> 
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Próximo</span>
-                </button>
-            </div>
-            -->
-
 
             <main class="container mt-4">
                 <div class="row">
@@ -282,16 +234,19 @@
                                 <a href="https://s.shopee.com.br/2fvpw635Na" target="_blank">
                                     <img src="img/ads/smartwatchs.webp" alt="I9 T900 Ultra Max Smart Watch 2.19 Tela HD Função Nfc Monitoramento de saúde" class="img-fluid">
                                 </a>
+                                <p class="p-shopee">Shopee</p>
                             </li>
                             <li class="item-ads-shopee">
                                 <a href="https://s.shopee.com.br/4fguT0jzo6" target="_blank">
                                     <img src="img/ads/Fones de ouvido Air Pro6 TWS-Bluetooth 5 Homem Usando.webp" alt="Fones de ouvido Air Pro6 TWS-Bluetooth 5" class="img-fluid">
                                 </a>
+                                <p class="p-shopee">Shopee</p>
                             </li>
                             <li class="item-ads-shopee">
                                 <a href="https://s.shopee.com.br/4fguT0jzo6" target="_blank">
                                     <img src="img/ads/Fones de ouvido Air Pro6 TWS-Bluetooth 5 Fone.webp" alt="Fones de ouvido Air Pro6 TWS-Bluetooth 5" class="img-fluid">
                                 </a>
+                                <p class="p-shopee">Shopee</p>
                             </li>
                         </ul>
 
@@ -411,7 +366,6 @@
             setTimeout(showNextItem, 4000);
         }
 
-        // Inicializa a primeira imagem visível
         items[0].classList.add("active");
         setTimeout(showNextItem, 4000);
     });
