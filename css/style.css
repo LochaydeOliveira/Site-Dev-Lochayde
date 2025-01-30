@@ -1199,3 +1199,8 @@ footer .link-juridicos .link-juridicos-content ul {
   left: 42%;
   background: #fff;
 }
+
+.dropdown-menu {
+  max-width: 22rem;
+  overflow: hidden;
+}
