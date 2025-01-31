@@ -256,10 +256,11 @@ textarea::placeholder {
 .title-section::after {
   content: '';
   position: absolute;
-  background: linear-gradient(140deg, #38acff 0%, #38acff 15%, #38acff63 45%, rgb(78 11 11 / 0%) 74%, rgb(3 6 19 / 0%) 99%);
+  background: linear-gradient(140deg, #9a6f12 0%, #9a6f12 15%, #9a6f126b 45%, rgb(78 11 11 / 0%) 74%, rgb(3 6 19 / 0%) 99%);
   height: 5px;
   width: 100%;
   bottom: 0;
+  border-radius: 5px;
 }
 
 
@@ -1204,3 +1205,8 @@ footer .link-juridicos .link-juridicos-content ul {
   background: #fff;
 }
 
+.p-qrcode {
+  color: #fff!important;
+  margin: 0 25px;
+  font-weight: 200;
+}
