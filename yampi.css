@@ -1,0 +1,354 @@
+ 
+  
+  /* Animação para os 5 slides, com transição a cada 5 segundos */
+  /*
+  @keyframes slide-ads {
+      0%, 20% {
+          content: "2 Peças com 15% de Desconto";
+      }
+      20.1%, 40% {
+          content: "Use o código HELIVA15";
+      }
+      40.1%, 60% {
+          content: "4 Peças ou + com 25% de Desconto";
+      }
+      60.1%, 80% {
+          content: "Use o código HELIVA25";
+      }
+      80.1%, 100% {
+          content: "Pagamento via Pix Enviamos em 24H";
+      }
+  }
+
+  @keyframes gradient-flow {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+      */
+
+  
+  
+  @media (max-width: 575.98px) {
+  .clearfix::before {
+      content: "2 Peças com 15% de Desconto";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #000000;
+      text-align: center;
+      padding: 18px 0;
+      font-weight: bold;
+      z-index: 9999;
+      background: linear-gradient(347deg, #ffcc1a, #ffcc1a, #ff9b00, #ffb100, #ffcc1a);
+      background-size: 400% 400%;
+      animation: gradient-flow 16s infinite, slide-ads 20s infinite;
+      font-size: 15px;
+  }
+      .holder-cols-checkout .cart-resume .detail {
+          font-size: 14px;
+      }
+       header {
+      --header-height: 64px!important;
+        padding: 35px 0 0px 0;
+      }  
+      }
+  
+      @media (min-width:64px) and (max-width: 767.98px) {
+  .clearfix::before {
+      content: "2 Peças com 15% de Desconto";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #000000;
+      text-align: center;
+      padding: 18px 0;
+      font-weight: bold;
+      z-index: 9999;
+      background: linear-gradient(347deg, #ffcc1a, #ffcc1a, #ff9b00, #ffb100, #ffcc1a);
+      background-size: 400% 400%;
+      animation: gradient-flow 16s infinite, slide-ads 20s infinite;
+      font-size: 15px;
+  }
+      header {
+      --header-height: 120px!important;
+        padding: 32px 0 0px 0;
+      }  
+      }
+  
+      @media (min-width: 768px) and (max-width: 991.98px) {
+      header {
+      --header-height: 120px!important;
+        padding: 25px 0 0px 0;
+      }  
+  .clearfix::before {
+      content: "2 Peças com 15% de Desconto";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #000000;
+      text-align: center;
+      padding: 18px 0;
+      font-weight: bold;
+      z-index: 9999;
+      background: linear-gradient(347deg, #ffcc1a, #ffcc1a, #ff9b00, #ffb100, #ffcc1a);
+      background-size: 400% 400%;
+      animation: gradient-flow 16s infinite, slide-ads 20s infinite;
+      font-size: 20px;
+  }
+      }
+  
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+      header {
+      --header-height: 105px!important;
+        padding: 25px 0 0px 0;
+      }    
+  .clearfix::before {
+      content: "2 Peças com 15% de Desconto";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #000000;
+      text-align: center;
+      padding: 18px 0;
+      font-weight: bold;
+      z-index: 9999;
+      background: linear-gradient(347deg, #ffcc1a, #ffcc1a, #ff9b00, #ffb100, #ffcc1a);
+      background-size: 400% 400%;
+      animation: gradient-flow 16s infinite, slide-ads 20s infinite;
+      font-size: 16px;
+  }
+      }
+      
+      @media (min-width: 1200px) {
+      header {
+          --header-height: 105px!important;
+            padding: 25px 0 0px 0;    
+      }
+  .clearfix::before {
+      content: "2 Peças com 15% de Desconto";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #000000;
+      text-align: center;
+      padding: 18px 0;
+      font-weight: bold;
+      z-index: 9999;
+      background: linear-gradient(347deg, #ffcc1a, #ffcc1a, #ff9b00, #ffb100, #ffcc1a);
+      background-size: 400% 400%;
+      animation: gradient-flow 16s infinite, slide-ads 20s infinite;
+      font-size: 16px;
+  }
+      }
+  
+      .ctx-title {
+          color: var(--title-color);
+          text-transform: var(--titles-uppercase);
+          font-size: 22px!important;
+      }
+      .holder-cols-checkout .box-checkout .box-title .desc {
+          font-size: 14px!important;
+      }
+      .holder-cols-checkout .discount-info .discount-info-description p {
+          font-size: 13px!important;
+      }
+      .f12 {
+          font-size: 14px!important;
+      }
+      .container-testimonials .box-testimonial {
+          font-size: 15px!important;
+      }
+      body.custom-checkout header .item-security, body.turboofertas header .item-security, body.yep header .item-security {
+          display: none!important;
+      }
+  .holder-cols-checkout .cart-resume .detail.total .value {
+      color: #f94e0a!important;
+      font-size: 1.5rem!important;
+      font-weight: 600;
+      letter-spacing: 0.06rem;
+      font-style: normal;
+  }
+      .btn-text.btn-purple {
+          color: #ffffff;
+           background: #969696
+      }
+      
+      .holder-cols-checkout .box-checkout.disabled .desc {
+          color:#000000!important;
+      }
+      
+      .holder-countdown {
+          padding: 9px 0 !important;
+      }
+      
+      .holder-cols-checkout .cart-resume .detail.total {
+          color: #000;
+          padding-top: 12px;
+          padding-bottom: 6px;
+      }
+      
+      .holder-cols-checkout .box-checkout.box-resume .cart_total {
+          color: #00a801;
+      }
+      
+      .form-horizontal .holder-input.valid:after {
+          position: absolute;
+          top: 14px;
+          right: 15px;
+          font-family: FontAwesome;
+          color: #00a801;
+          content: "\f00c";
+      }
+      
+      .holder-cols-checkout .box-checkout.active .box-title .holder-number {
+          background: #000;
+          border-color: #000!important;
+          color: #fff;
+      }
+      
+      .checkout-step.enabled .connect, .checkout-step.enabled .holder-icon {
+          background: #24b82b;
+      }
+      
+      a {
+          text-decoration: none;
+          color: #24b82b;
+      }
+      
+      .holder-cols-checkout .box-checkout.active {
+          cursor: default;
+          border: none;
+          border-radius: 5px;
+          /*box-shadow: 0 0 14px 4px #65656542;*/
+      }
+      
+      .c-green-2 {
+          color: #00a801!important;
+      }
+      
+      .holder-cols-checkout .box-checkout:not(.active):not(.disabled):not(.box-resume):not(.box-payment) .title {
+          color: #18212e!important;
+      }
+      
+      .holder-cols-checkout .box-checkout:not(.active):not(.disabled):not(.box-resume):not(.box-payment) .holder-number {
+          background-color: #18212e;
+      }
+      
+      .green {
+          color: #00a801!important;
+      }
+      
+      .icon-mercadopago {
+          background-image: url(https://http2.mlstatic.com/frontend-assets/ui-navigation/5.14.4/mercadopago/logo__large.png);
+      }
+      
+      /* Rodapé */
+      
+      span.f11.black-50::after {
+          content: ' Atendimento via WhatsApp: (61) 99421-6467 \A Segunda à Sábado das 08:00 às 18:00  \A\A Caucaia - CE, CEP 61600-970 \A CNPJ:44.753.619/0001-42 \A ©️ Todos os direitos reservados.';
+          display: block;
+          margin-top: 15px;
+          white-space: pre-wrap;
+          line-height: 1.8;
+      }
+  
+  .holder-cols-checkout .container-shipment .option {
+      background: #fff;
+      border: 1px solid #d0d0d0!important;
+      border-radius: 5px!important;
+      box-sizing: border-box!important;
+      color: #333!important;
+      cursor: pointer!important;
+      display: flex!important;
+      line-height: 15px!important;
+      margin: 0 0 10px!important;
+      padding: 10px!important;
+      position: relative!important;
+      flex-wrap: wrap!important;
+  }
+  .holder-cols-checkout .container-addresses .box-address .inner-box {
+      background: #fff;
+      border: 1px solid #d0d0d0;
+      border-radius: 5px;
+      box-sizing: border-box;
+      color: #333;
+      cursor: pointer;
+      display: block;
+      font-size: 11px;
+      line-height: 14px;
+      margin: 0 0 10px;
+      padding: 10px 15px 30px;
+  }  
+  
+  @media (max-width: 575.98px) {
+      .inner-box.holder-icheck {
+          background-image: url(https://cdn.shopify.com/s/files/1/0781/9359/0593/files/soft_shadow.svg?v=1729782565)!important;
+          background-size: 330px!important;
+          content: ""!important;
+          background-repeat: no-repeat!important;
+          background-position-x: 9px!important;
+          background-position-y: 90%!important;
+      }
+  }
+  @media (min-width:1200px){
+    .inner-box.holder-icheck {
+          background-image: url(https://cdn.shopify.com/s/files/1/0781/9359/0593/files/soft_shadow.png?v=1729654786)!important;
+          background-size: 315px!important;
+          content: ""!important;
+          background-repeat: no-repeat!important;
+          background-position-x: 9px!important;
+          background-position-y: 90%!important;
+    }
+  }
+  @media (min-width:768px) and (max-width:991.98px){
+    .inner-box.holder-icheck {
+          background-image: url(https://cdn.shopify.com/s/files/1/0781/9359/0593/files/soft_shadow.png?v=1729654786)!important;
+          background-size: 315px!important;
+          content: ""!important;
+          background-repeat: no-repeat!important;
+          background-position-x: 9px!important;
+          background-position-y: 90%!important;
+    }
+  }  
+  @media (min-width:576px) and (max-width:767.98px){
+      .inner-box.holder-icheck {
+          background-image: url(https://cdn.shopify.com/s/files/1/0781/9359/0593/files/soft_shadow.png?v=1729654786)!important;
+          background-size: 355px!important;
+          content: ""!important;
+          background-repeat: no-repeat!important;
+          background-position-x: 9px!important;
+          background-position-y: 90%!important;
+      }
+  }
+  .holder-countdown .countdown-text {
+    font-size: 20px!important;
+  }
+  
+  .btn-primary {
+      font-weight: 700!important;
+      letter-spacing: 3px;;
+  }
+  
+  .holder-countdown .countdown-text {
+      font-size: 15px!important;
+  }
+  
+  .holder-cols-checkout .container-shipment .option .inner-label .text {
+      width: 78%!important;
+  }
+  
+  .yellow {
+      color: #ffbc05!important;
+  }
