@@ -48,6 +48,43 @@
 
     
 <style>
+#cookie-banner {
+    background:  #282621cf;
+}
+
+#cookie-banner p {
+    color: #fff!important;
+    font-size: 15px;
+    font-weight: 300!important;
+}
+
+#button-acept {
+    border-radius: 2px!important;
+    background: #ffffff;
+    border: none;
+    color: #000;
+    font-weight: 800;
+}
+
+#button-acept:hover {
+    background: #01ff41;
+
+}
+
+#button-reject {
+    border-radius: 2px!important;
+    background: #ffffff;
+    border: none;
+    color: #000;
+    font-weight: 300;
+}
+
+#button-reject:hover {
+    background: #ff3333;
+    color: #fff;
+
+}
+
 .list-post-one {
     display: flex;
     flex-direction: column;
@@ -342,6 +379,20 @@
         </div>
     <div data-include-html="footer.html"></div>
 
+
+<div id="cookie-banner" class="fixed-bottom text-white p-3 d-none">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-2 mb-md-0">
+            Usamos cookies para personalizar sua experiência, melhorar a navegação e analisar o tráfego do site. 
+            Para mais informações, consulte nossa 
+            <a href="politica-de-cookies.html" class="text-warning text-decoration-underline">Política de Cookies</a>.
+        </p>
+        <div style="display: flex;">
+            <button id="button-acept" class="btn btn-success me-2" onclick="acceptCookies()">ACEITAR</button>
+            <button id="button-reject" class="btn btn-danger" onclick="rejectCookies()">REJEITAR</button>
+        </div>
+    </div>
+</div>
  
 </body>
 
@@ -353,6 +404,24 @@
 <script src="swiper/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
 
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (!localStorage.getItem("cookieConsent")) {
+            document.getElementById("cookie-banner").classList.remove("d-none");
+        }
+    });
+
+    function acceptCookies() {
+        localStorage.setItem("cookieConsent", "accepted");
+        document.getElementById("cookie-banner").classList.add("d-none");
+    }
+
+    function rejectCookies() {
+        localStorage.setItem("cookieConsent", "rejected");
+        document.getElementById("cookie-banner").classList.add("d-none");
+    }
+</script>
       
 </body>
 </html>
