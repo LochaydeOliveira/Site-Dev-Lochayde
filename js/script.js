@@ -41,3 +41,27 @@ function includeHTML() {
     items[0].classList.add("active");
     setTimeout(showNextItem, 4000);
 });
+
+
+
+
+        window.addEventListener("load", function () {
+          var btnTopo = document.getElementById("btnTopo");
+
+
+          window.addEventListener("scroll", function () {
+              if (window.scrollY > 1250) {
+                  btnTopo.style.display = "block";
+              } else {
+                  btnTopo.style.display = "none";
+              }
+          });
+
+
+          btnTopo.addEventListener("click", function () {
+              window.scrollTo({
+                  top: 0,
+                  behavior: "smooth"
+              });
+          });
+      });

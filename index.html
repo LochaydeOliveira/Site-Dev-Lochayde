@@ -48,38 +48,42 @@
     
 <style>
 #cookie-banner {
-    background:  #282621cf;
+    background: #5a5a5a;
+    padding: 7px!important;
 }
 
 #cookie-banner p {
     color: #fff!important;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 300!important;
+
 }
 
 #button-acept {
     border-radius: 2px!important;
-    background: #ffffff;
+    background: #303030;
     border: none;
-    color: #000;
-    font-weight: 800;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px!important;
 }
 
 #button-acept:hover {
-    background: #01ff41;
+    background: #444444;
 
 }
 
 #button-reject {
     border-radius: 2px!important;
-    background: #ffffff;
+    background: #303030;
     border: none;
-    color: #000;
-    font-weight: 300;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px!important;
 }
 
 #button-reject:hover {
-    background: #ff3333;
+    background: #444444;
     color: #fff;
 
 }
@@ -387,7 +391,7 @@
             <a href="politica-de-cookies.html" class="text-warning text-decoration-underline">Política de Cookies</a>.
         </p>
         <div style="display: flex;">
-            <button id="button-acept" class="btn btn-success me-2" onclick="acceptCookies()">ACEITAR</button>
+            <button id="button-acept" class="btn btn-success me-2" onclick="acceptCookies()">OK, ACEITAR</button>
             <button id="button-reject" class="btn btn-danger" onclick="rejectCookies()">REJEITAR</button>
         </div>
     </div>
@@ -419,6 +423,8 @@
         document.getElementById("cookie-banner").classList.add("d-none");
     }
 </script>
-      
+<button id="btnTopo" class="btn btn-danger btn-lg">
+    ↑ Topo
+</button>    
 </body>
 </html>
