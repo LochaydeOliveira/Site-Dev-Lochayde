@@ -78,7 +78,9 @@ function includeHTML() {
                 card.className = "col";
                 card.innerHTML = `
                     <div class="card h-100 border-0 rounded-pill text-center">
-                        <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                        <a class="img-prod" href="${product.url}" target="_blank">   
+                            <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                        </a>
                         <div class="card-body">
                             <div class="rating">
                                 <span class="stars" data-rating="${product.rating}"></span>

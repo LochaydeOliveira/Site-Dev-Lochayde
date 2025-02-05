@@ -1279,3 +1279,12 @@ footer .link-juridicos .link-juridicos-content ul {
 .card-img, .card-img-top {
   border-radius: 0!important;
 }
+
+.img-prod {
+  transition: all 150ms ease-in-out;
+}
+
+.img-prod:hover {
+  transform: scale(1.05)!important;
+}
+
