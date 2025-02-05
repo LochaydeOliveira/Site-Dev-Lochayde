@@ -126,3 +126,6 @@ function includeHTML() {
         downloadAnchor.click();
         document.body.removeChild(downloadAnchor);
     }
+
+
+    
