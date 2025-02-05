@@ -1263,3 +1263,15 @@ footer .link-juridicos .link-juridicos-content ul {
 .slide-afiliate {
   margin: 35rem 0 0!important;
 }
+
+.dropdown-item {
+  font-weight: 600!important;
+  color: #555!important;
+  text-transform: capitalize!important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #1e2125;
+  background-color: #e3bd6a!important;
+  text-decoration: none!important;
+}
