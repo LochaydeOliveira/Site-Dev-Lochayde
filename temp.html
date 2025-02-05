@@ -1,0 +1,61 @@
+<div id="product-container" class="row row-cols-1 row-cols-md-3 g-4"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const products = [
+      {
+        image: "img/ads/Bicicleta1.webp",
+        name: "Bicicleta 29 GT Sprint MX7 24V index Freio Disco Alumínio MTB",
+        price: "R$ 799,90",
+        rating: 4.5
+      },
+      {
+        image: "img/ads/Bicicleta2.webp",
+        name: "Bicicleta 27.5 KSW XLT 21V Freio a Disco Hidráulico",
+        price: "R$ 1.299,90",
+        rating: 4.8
+      },
+      {
+        image: "img/ads/Bicicleta3.webp",
+        name: "Bicicleta Caloi Vulcan Aro 29 21V Freio a Disco",
+        price: "R$ 1.599,00",
+        rating: 4.7
+      }
+    ];
+
+    const container = document.getElementById("product-container");
+    
+    products.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "col";
+      card.innerHTML = `
+        <div class="card h-100 border-0 rounded-pill text-center">
+          <img src="${product.image}" class="card-img-top" alt="${product.name}">
+          <div class="card-body">
+            <a href="#" class="card-title" target="_blank">${product.name}</a>
+            <p style="display: none!important;">${product.price}</p>
+            <div class="rating">
+              <span class="stars" data-rating="${product.rating}"></span>
+              <span class="rating-text">${product.rating} de 5</span>
+            </div>
+          </div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+    
+    document.querySelectorAll(".stars").forEach(el => {
+      let rating = parseFloat(el.getAttribute("data-rating"));
+      let filledStars = Math.round(rating);
+      el.innerHTML = "\u2605".repeat(filledStars) + "\u2606".repeat(5 - filledStars);
+    });
+  });
+</script>
+
+<style>
+  .stars {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: gold;
+  }
+</style>

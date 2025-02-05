@@ -276,7 +276,7 @@ textarea::placeholder {
     flex: 1 1 auto;
     padding: 1rem 1rem;
     background: #fff;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0;
     position: relative;
     bottom: 0;
 }
@@ -1274,4 +1274,8 @@ footer .link-juridicos .link-juridicos-content ul {
   color: #1e2125;
   background-color: #e3bd6a!important;
   text-decoration: none!important;
+}
+
+.card-img, .card-img-top {
+  border-radius: 0!important;
 }
