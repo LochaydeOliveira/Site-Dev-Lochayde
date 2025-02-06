@@ -1321,3 +1321,26 @@ footer .link-juridicos .link-juridicos-content ul {
   background: rgba(78, 78, 78, 0.9);
   transform: scale(1.05);
 }
+
+
+
+.dropdown-menu .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  display: none;
+}
+
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+
+
+@media (min-width: 992px) {
+  .dropdown-submenu:hover > .dropdown-menu {
+      display: block;
+  }
+}
