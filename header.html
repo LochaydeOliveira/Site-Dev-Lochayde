@@ -55,92 +55,6 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-<!-- 
-        <div class="collapse navbar-collapse text-uppercase" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="https://lochaydeoliveira.com.br">
-                        Início
-                    </a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Artigos
-                    </a>
-
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="https://lochaydeoliveira.com.br/o-que-e-hifi.html">
-                                O que é HIFI?
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="https://lochaydeoliveira.com.br/10-profissoes-que-estao-em-risco-de-desaparecer-em-breve.html">
-                                10 Profissões Que Estão em Risco de Desaparecer em Breve
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="https://lochaydeoliveira.com.br/19-frases-comuns-usadas-por-manipuladores-ao-praticar-gaslighting.html">
-                            19 Frases Comuns Usadas por Manipuladores ao Praticar Gaslighting
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="https://lochaydeoliveira.com.br/racismo-ambiental-a-tragedia-invisivel-que-precisamos-enxergar.html">
-                                Racismo Ambiental: A Tragédia Invisível Que Precisamos Enxergar
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="https://lochaydeoliveira.com.br/sindrome-da-cabeca-explosiva.html">
-                                Síndrome da Cabeça Explosiva: Você Já Sentiu Isso?
-                            </a>
-                        </li>                     
-                    </ul>
-                </li>
-
-                
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOfertas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Ofertas
-                    </a>
-                    
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownOfertas">
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item" href="catalogo.html">Produtos</a>
-                        </li>
-
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item" href="catalogo.html">Cursos</a>
-                        </li>
-                    </ul>
-                </li>
-
-
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Sobre
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="https://lochaydeoliveira.com.br/sobre.html">Sobre o Blog</a></li>
-                        <li><a class="dropdown-item" href="https://lochaydeoliveira.com.br/termos-de-uso.html">Termos de Uso</a></li>
-                        <li><a class="dropdown-item" href="https://lochaydeoliveira.com.br/politica-de-privacidade.html">Política de Privacidade</a></li>
-                        <li><a class="dropdown-item" href="https://lochaydeoliveira.com.br/politica-de-cookies.html">Política de Cookies</a></li>
-                    </ul>
-                </li>
-
-
-
-                <li class="nav-item">
-                    <a class="nav-link" href="https://lochaydeoliveira.com.br/contato.html">
-                        Contato
-                    </a>
-                </li>
-            </ul>
-        </div> -->
-
-
         <div class="collapse navbar-collapse text-uppercase" id="navbarNav">
             <ul class="navbar-nav ms-auto">
 
@@ -267,24 +181,5 @@
 <script src="js/script.js"></script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Seleciona todos os dropdowns do menu
-        document.querySelectorAll('.dropdown-submenu > a').forEach(function (element) {
-            element.addEventListener("click", function (e) {
-                if (window.innerWidth < 992) { // Só ativa no mobile
-                    e.preventDefault(); // Impede o link de ser seguido
-                    let submenu = this.nextElementSibling;
-                    if (submenu.style.display === "block") {
-                        submenu.style.display = "none";
-                    } else {
-                        // Fecha outros submenus abertos antes de abrir o novo
-                        document.querySelectorAll('.dropdown-menu .dropdown-menu').forEach(function (el) {
-                            el.style.display = "none";
-                        });
-                        submenu.style.display = "block";
-                    }
-                }
-            });
-        });
-    });
+
 </script>
