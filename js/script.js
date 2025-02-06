@@ -130,4 +130,22 @@ function includeHTML() {
     }
 
 
-    
+    function checkVisibility() {
+        const banner = document.getElementById('bannerSlim');
+        const rect = banner.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        if (rect.top <= windowHeight && rect.bottom >= 0) {
+            banner.classList.add('banner-visible');
+        }
+    }
+
+    function hideBanner() {
+        const banner = document.getElementById('bannerSlim');
+        banner.style.opacity = '0';
+        setTimeout(() => {
+            banner.style.display = 'none';
+        }, 500); // Tempo do fade-out
+    }
+
+    document.addEventListener('scroll', checkVisibility);

@@ -1288,3 +1288,36 @@ footer .link-juridicos .link-juridicos-content ul {
   transform: scale(1.05)!important;
 }
 
+
+.banner-slim {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  position: relative;
+  display: none;
+  justify-content: center;
+  margin: 0 auto 10rem;
+}
+
+.banner-visible {
+  opacity: 1;
+  display: flex;
+}
+
+.close-banner {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffffb5;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+
+.close-banner:hover {
+  background: rgba(78, 78, 78, 0.9);
+  transform: scale(1.05);
+}
