@@ -66,7 +66,7 @@ function includeHTML() {
           });
       });
 
-
+      if (window.location.pathname.includes("catalogo.html")) {
       document.addEventListener("DOMContentLoaded", function() {
         fetch("catalogo.json")
         .then(response => response.json())
@@ -93,16 +93,32 @@ function includeHTML() {
                 `;
                 container.appendChild(card);
             });
-    
+
             document.querySelectorAll(".stars").forEach(el => {
                 let rating = parseFloat(el.getAttribute("data-rating"));
-                let filledStars = Math.round(rating);
-                el.innerHTML = "★".repeat(filledStars) + "☆".repeat(5 - filledStars);
+                let starsHTML = "";
+            
+                for (let i = 1; i <= 5; i++) {
+                    if (rating >= 4.7) {
+                        starsHTML += '<i class="bi bi-star-fill"></i>'; // 5 estrelas cheias
+                    } else if (rating > 4.4 && rating < 4.6 && i === 5) {
+                        starsHTML += '<i class="bi bi-star-half"></i>'; // Quinta estrela pela metade
+                    } else if (rating <= 4.4 && i === 5) {
+                        starsHTML += '<i class="bi bi-star"></i>'; // Quinta estrela vazia
+                    } else {
+                        starsHTML += '<i class="bi bi-star-fill"></i>'; // Estrelas cheias padrão
+                    }
+                }
+            
+                el.innerHTML = starsHTML;
             });
+            
+    
+            
         })
         .catch(error => console.error("Erro ao carregar os produtos:", error));
     });
-    
+    }
 
     let products = [];
 

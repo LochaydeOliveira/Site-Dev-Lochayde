@@ -22,21 +22,22 @@
     <div style="margin: 0 auto 5rem auto;" class="title-section">
         <h1>Atualizar o Catálogo</h1>
     </div>
+    <div>
+
+    <div>
+        <h3 class="mt-4 text-center">JSON Atualizado</h3>
+        <textarea style="width: 50%;margin: 0 auto;" id="jsonOutput" class="form-control" rows="10" readonly></textarea>
+        
+        <div class="text-center mt-3">
+            <button class="btn btn-success" onclick="downloadJSON()">Baixar JSON</button>
+        </div>
+    </div>      
 
     <div class="contact-container">
         <form style="margin: 0 auto 5rem auto;" id="productForm" class="row g-3">
 
             <div class="col-md-6">
-                <label class="form-label">Categoria:</label>
-                <select class="form-control" id="category">
-                    <option value="catalogo">Catálogo Geral</option>
-                    <option value="smartwatches">Smartwatches</option>
-                    <!-- Adicione mais categorias se precisar -->
-                </select>
-            </div>
-            
-            <div class="col-md-6">
-                <label class="form-label">Nome:</label>
+                <label class="form-label">Produto:</label>
                 <input type="text" class="form-control" id="name" required>
             </div>
     
@@ -60,11 +61,8 @@
             </div>
         </form>        
     </div>
-    <h3 class="mt-4 text-center">JSON Atualizado</h3>
-    <textarea id="jsonOutput" class="form-control" rows="10" readonly></textarea>
-    
-    <div class="text-center mt-3">
-        <button class="btn btn-success" onclick="downloadJSON()">Baixar JSON</button>
+
+
     </div>
 </main>
 
