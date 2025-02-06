@@ -90,7 +90,7 @@
 <body>
     <div data-include-html="header.html"></div>
     <div class="container mt-4">
-        <h1 class="p-4 text-center">Produtos <strong>Viralizados</strong></h1>
+        <h1 class="p-4 text-center">Smart<strong>Watches</strong></h1>
         <div id="product-container" class="row row-cols-2 row-cols-md-6 g-4"></div>
     </div>
     <div data-include-html="footer.html"></div>
@@ -115,3 +115,41 @@
 </body>
 
 </html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  fetch("smartwatches.json")  
+  .then(response => response.json())
+  .then(products => {
+      const container = document.getElementById("product-container");
+      
+      products.forEach(product => {
+          const card = document.createElement("div");
+          card.className = "col";
+          card.innerHTML = `
+              <div class="card h-100 border-0 rounded-pill text-center">
+                  <a class="img-prod" href="${product.url}" target="_blank">   
+                      <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                  </a>
+                  <div class="card-body">
+                      <div class="rating">
+                          <span class="stars" data-rating="${product.rating}"></span>
+                          <span class="rating-text">${product.rating}</span>
+                      </div>
+                      <a href="${product.url}" class="card-title" target="_blank">${product.name}</a>
+                      <p style="display: none!important;">${product.price}</p>
+                  </div>
+              </div>
+          `;
+          container.appendChild(card);
+      });
+
+      document.querySelectorAll(".stars").forEach(el => {
+          let rating = parseFloat(el.getAttribute("data-rating"));
+          let filledStars = Math.round(rating);
+          el.innerHTML = "★".repeat(filledStars) + "☆".repeat(5 - filledStars);
+      });
+  })
+  .catch(error => console.error("Erro ao carregar os produtos:", error));
+});
+</script>
