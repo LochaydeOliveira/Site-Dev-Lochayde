@@ -45,27 +45,6 @@ function includeHTML() {
 
 
 
-        window.addEventListener("load", function () {
-          var btnTopo = document.getElementById("btnTopo");
-
-
-          window.addEventListener("scroll", function () {
-              if (window.scrollY > 1250) {
-                  btnTopo.style.display = "block";
-              } else {
-                  btnTopo.style.display = "none";
-              }
-          });
-
-
-          btnTopo.addEventListener("click", function () {
-              window.scrollTo({
-                  top: 0,
-                  behavior: "smooth"
-              });
-          });
-      });
-
       if (window.location.pathname.includes("catalogo.html")) {
       document.addEventListener("DOMContentLoaded", function() {
         fetch("catalogo.json")
