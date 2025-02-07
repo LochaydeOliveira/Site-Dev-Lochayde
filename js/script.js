@@ -80,29 +80,38 @@ try {
     
     // Limpa o container antes de inserir novos produtos
     container.innerHTML = "";
-    
-    // Insere os produtos na página
-    for (let produto of produtos) {
-        const card = document.createElement("div");
-        card.className = "col";
-        card.innerHTML = `
-            <div class="card h-100 border-0 rounded-pill text-center">
-                <a class="img-prod" href="${produto.url}" target="_blank">
-                    <img src="${produto.image}" class="card-img-top" alt="${produto.name}">
-                </a>
-                <img class="logo-brand" src="${produto.logo}" alt="logo da marca">
-                <div class="card-body">
-                    <div class="rating">
-                        <span class="stars" data-rating="${produto.rating}"></span>
-                        <span class="rating-text">${produto.rating}</span>
-                    </div>
-                    <a href="${produto.url}" class="card-title" target="_blank">${produto.name}</a>
-                    <p style="display: none!important;">${produto.price}</p>
-                </div>
-            </div>
-        `;
-        container.appendChild(card);
+
+
+// Insere os produtos na página
+for (let produto of produtos) {
+    let logo = produto.logo;
+    if (produto.logo.toLowerCase() === "amazon") {
+        logo = "img/Amazon-Logo.png";
+    } else if (produto.logo.toLowerCase() === "shopee") {
+        logo = "img/shopee-logo.png";
     }
+
+    const card = document.createElement("div");
+    card.className = "col";
+    card.innerHTML = `
+        <div class="card h-100 border-0 rounded-pill text-center">
+            <a class="img-prod" href="${produto.url}" target="_blank">
+                <img src="${produto.image}" class="card-img-top" alt="${produto.name}">
+            </a>
+            <img class="logo-brand" src="${logo}" alt="logo da marca">
+            <div class="card-body">
+                <div class="rating">
+                    <span class="stars" data-rating="${produto.rating}"></span>
+                    <span class="rating-text">${produto.rating}</span>
+                </div>
+                <a href="${produto.url}" class="card-title" target="_blank">${produto.name}</a>
+                <p style="display: none!important;">${produto.price}</p>
+            </div>
+        </div>
+    `;
+    container.appendChild(card);
+}
+
     
     // Atualiza as estrelas de avaliação
     document.querySelectorAll(".stars").forEach(el => {
@@ -137,8 +146,9 @@ function addProduct() {
     let image = document.getElementById("image").value;
     let rating = parseFloat(document.getElementById("rating").value);
     let url = document.getElementById("url").value;
+    let plataforma = document.getElementById("logo").value;
 
-    let newProduct = { name, image, rating, url };
+    let newProduct = { name, image, rating, url, plataforma };
 
     products.push(newProduct);
 
