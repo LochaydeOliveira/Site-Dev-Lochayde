@@ -56,10 +56,11 @@ function includeHTML() {
                 const card = document.createElement("div");
                 card.className = "col";
                 card.innerHTML = `
-                    <div class="card h-100 border-0 rounded-pill text-center">
-                        <a class="img-prod" href="${product.url}" target="_blank">   
+                    <div class="card h-100 border-0 rounded-pill text-center">                        
+                        <a class="img-prod" href="${product.url}" target="_blank">                           
                             <img src="${product.image}" class="card-img-top" alt="${product.name}">
                         </a>
+                        <img class="logo-brand" src="${product.logo}" alt="logo da marca">
                         <div class="card-body">
                             <div class="rating">
                                 <span class="stars" data-rating="${product.rating}"></span>

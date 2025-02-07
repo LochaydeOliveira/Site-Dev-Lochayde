@@ -1316,6 +1316,13 @@ footer .link-juridicos .link-juridicos-content ul {
   transition: all 150ms ease-in-out;
 }
 
+.logo-brand {
+  max-width: 70px;
+  width: 100%;
+  z-index: 9;
+  margin: 0  auto;
+}
+
 .img-prod:hover {
   transform: scale(1.05)!important;
 }
