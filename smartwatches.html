@@ -57,16 +57,6 @@
     <script src="swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const ratingElements = document.querySelectorAll(".stars");
-          ratingElements.forEach(el => {
-            let rating = parseFloat(el.getAttribute("data-rating"));
-            let filledStars = Math.round(rating);
-            el.innerHTML = "\u2605".repeat(filledStars) + "\u2606".repeat(5 - filledStars);
-          });
-        });
-    </script>
 
 </body>
 

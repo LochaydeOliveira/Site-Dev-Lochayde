@@ -1338,7 +1338,7 @@ footer .link-juridicos .link-juridicos-content ul {
 .close-banner {
   position: absolute;
   top: 5px;
-  right: 50px;
+  right: 100px;
   background: rgba(0, 0, 0, 0.7);
   color: #ffffffb5;
   border: none;
