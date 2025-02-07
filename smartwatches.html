@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
           container.appendChild(card);
       });
 
-      document.querySelectorAll(".stars").forEach(el => {
+            document.querySelectorAll(".stars").forEach(el => {
                 let rating = parseFloat(el.getAttribute("data-rating"));
                 let starsHTML = "";
             
@@ -109,13 +109,16 @@ document.addEventListener("DOMContentLoaded", function() {
                         starsHTML += '<i class="bi bi-star-fill"></i>'; 
                     } else if (rating > 4.4 && rating < 4.6 && i === 5) {
                         starsHTML += '<i class="bi bi-star-half"></i>'; 
+                    } else if (rating <= 4.4 && i === 5) {
                         starsHTML += '<i class="bi bi-star"></i>'; 
-                        starsHTML += '<i class="bi bi-star-fill"></i>';
+                    } else {
+                        starsHTML += '<i class="bi bi-star-fill"></i>'; 
                     }
                 }
             
                 el.innerHTML = starsHTML;
             });
+
   })
   .catch(error => console.error("Erro ao carregar os produtos:", error));
 });

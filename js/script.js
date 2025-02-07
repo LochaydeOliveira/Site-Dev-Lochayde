@@ -100,13 +100,13 @@ function includeHTML() {
             
                 for (let i = 1; i <= 5; i++) {
                     if (rating >= 4.7) {
-                        starsHTML += '<i class="bi bi-star-fill"></i>'; // 5 estrelas cheias
+                        starsHTML += '<i class="bi bi-star-fill"></i>'; 
                     } else if (rating > 4.4 && rating < 4.6 && i === 5) {
-                        starsHTML += '<i class="bi bi-star-half"></i>'; // Quinta estrela pela metade
+                        starsHTML += '<i class="bi bi-star-half"></i>'; 
                     } else if (rating <= 4.4 && i === 5) {
-                        starsHTML += '<i class="bi bi-star"></i>'; // Quinta estrela vazia
+                        starsHTML += '<i class="bi bi-star"></i>'; 
                     } else {
-                        starsHTML += '<i class="bi bi-star-fill"></i>'; // Estrelas cheias padrão
+                        starsHTML += '<i class="bi bi-star-fill"></i>'; 
                     }
                 }
             
