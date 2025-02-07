@@ -45,60 +45,86 @@ function includeHTML() {
 
 
 
-      if (window.location.pathname.includes("catalogo.html")) {
-      document.addEventListener("DOMContentLoaded", function() {
-        fetch("catalogo.json")
-        .then(response => response.json())
-        .then(products => {
-            const container = document.getElementById("product-container");
-            
-            products.forEach(product => {
-                const card = document.createElement("div");
-                card.className = "col";
-                card.innerHTML = `
-                    <div class="card h-100 border-0 rounded-pill text-center">                        
-                        <a class="img-prod" href="${product.url}" target="_blank">                           
-                            <img src="${product.image}" class="card-img-top" alt="${product.name}">
-                        </a>
-                        <img class="logo-brand" src="${product.logo}" alt="logo da marca">
-                        <div class="card-body">
-                            <div class="rating">
-                                <span class="stars" data-rating="${product.rating}"></span>
-                                <span class="rating-text">${product.rating}</span>
-                            </div>
-                            <a href="${product.url}" class="card-title" target="_blank">${product.name}</a>
-                            <p style="display: none!important;">${product.price}</p>
+document.addEventListener("DOMContentLoaded", async function () {
+    try {
+        // Obtém a URL atual
+        const urlAtual = window.location.href.toLowerCase();
+        
+        // Carrega as categorias
+        const categoriasResponse = await fetch("categorias.json");
+        const categorias = await categoriasResponse.json();
+        
+        let categoriaEncontrada = null;
+        
+        // Verifica se a URL contém alguma das categorias
+        for (let categoria of categorias) {
+            if (urlAtual.includes(categoria.toLowerCase())) {
+                categoriaEncontrada = categoria;
+                break;
+            }
+        }
+        
+        if (!categoriaEncontrada) {
+            console.warn("Nenhuma categoria correspondente encontrada.");
+            return;
+        }
+        
+        // Carrega o JSON da categoria correspondente
+        const produtosResponse = await fetch(`${categoriaEncontrada}.json`);
+        const produtos = await produtosResponse.json();
+        
+        const container = document.getElementById("product-container");
+        
+        // Limpa o container antes de inserir novos produtos
+        container.innerHTML = "";
+        
+        // Insere os produtos na página
+        for (let produto of produtos) {
+            const card = document.createElement("div");
+            card.className = "col";
+            card.innerHTML = `
+                <div class="card h-100 border-0 rounded-pill text-center">
+                    <a class="img-prod" href="${produto.url}" target="_blank">
+                        <img src="${produto.image}" class="card-img-top" alt="${produto.name}">
+                    </a>
+                    <img class="logo-brand" src="${produto.logo}" alt="logo da marca">
+                    <div class="card-body">
+                        <div class="rating">
+                            <span class="stars" data-rating="${produto.rating}"></span>
+                            <span class="rating-text">${produto.rating}</span>
                         </div>
+                        <a href="${produto.url}" class="card-title" target="_blank">${produto.name}</a>
+                        <p style="display: none!important;">${produto.price}</p>
                     </div>
-                `;
-                container.appendChild(card);
-            });
-
-            document.querySelectorAll(".stars").forEach(el => {
-                let rating = parseFloat(el.getAttribute("data-rating"));
-                let starsHTML = "";
+                </div>
+            `;
+            container.appendChild(card);
+        }
+        
+        // Atualiza as estrelas de avaliação
+        document.querySelectorAll(".stars").forEach(el => {
+            let rating = parseFloat(el.getAttribute("data-rating"));
+            let starsHTML = "";
             
-                for (let i = 1; i <= 5; i++) {
-                    if (rating >= 4.7) {
-                        starsHTML += '<i class="bi bi-star-fill"></i>'; 
-                    } else if (rating > 4.4 && rating < 4.6 && i === 5) {
-                        starsHTML += '<i class="bi bi-star-half"></i>'; 
-                    } else if (rating <= 4.4 && i === 5) {
-                        starsHTML += '<i class="bi bi-star"></i>'; 
-                    } else {
-                        starsHTML += '<i class="bi bi-star-fill"></i>'; 
-                    }
+            for (let i = 1; i <= 5; i++) {
+                if (rating >= 4.7) {
+                    starsHTML += '<i class="bi bi-star-fill"></i>';
+                } else if (rating > 4.4 && rating < 4.6 && i === 5) {
+                    starsHTML += '<i class="bi bi-star-half"></i>';
+                } else if (rating <= 4.4 && i === 5) {
+                    starsHTML += '<i class="bi bi-star"></i>';
+                } else {
+                    starsHTML += '<i class="bi bi-star-fill"></i>';
                 }
+            }
             
-                el.innerHTML = starsHTML;
-            });
-            
-    
-            
-        })
-        .catch(error => console.error("Erro ao carregar os produtos:", error));
-    });
+            el.innerHTML = starsHTML;
+        });
+    } catch (error) {
+        console.error("Erro ao carregar os produtos:", error);
     }
+});
+
 
     let products = [];
 
