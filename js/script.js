@@ -146,9 +146,9 @@ function addProduct() {
     let image = document.getElementById("image").value;
     let rating = parseFloat(document.getElementById("rating").value);
     let url = document.getElementById("url").value;
-    let plataforma = document.getElementById("logo").value;
+    let logo = document.getElementById("logo").value;
 
-    let newProduct = { name, image, rating, url, plataforma };
+    let newProduct = { name, image, rating, url, logo };
 
     products.push(newProduct);
 
