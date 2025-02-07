@@ -57,8 +57,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         let categoriaEncontrada = null;
         
         // Verifica se a URL contém alguma das categorias
-        for (let categoria of categorias) {
-            if (urlAtual.includes(categoria.toLowerCase())) {
+        for (let categoriaObj of categorias) {
+            let categoria = categoriaObj.category.toLowerCase();
+            if (urlAtual.includes(categoria)) {
                 categoriaEncontrada = categoria;
                 break;
             }
@@ -124,6 +125,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.error("Erro ao carregar os produtos:", error);
     }
 });
+
 
 
     let products = [];
