@@ -432,7 +432,7 @@ footer div hr {
     text-align: center!important;
   }
 
-  .col-content h5 {
+  .col-content h2 {
     font-size: 18px;
     text-transform: uppercase;
   }
@@ -445,7 +445,7 @@ footer div hr {
 
 }
 
-.col-content h5 {
+.col-content h2 {
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -1378,6 +1378,6 @@ footer .link-juridicos .link-juridicos-content ul {
 }
 
 .bg-greem-destaques {
-    background: #46b55e!important;
+    background: #2e8140!important;
     border: none!important;
 }
