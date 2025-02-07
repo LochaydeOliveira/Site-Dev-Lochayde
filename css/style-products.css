@@ -1,8 +1,9 @@
 .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100%;
+  max-height: max-content;
 }
 
 .card-title {

@@ -1276,6 +1276,38 @@ footer .link-juridicos .link-juridicos-content ul {
   text-decoration: none!important;
 }
 
+
+.card {
+  width: 100%; /* Para ocupar todo o espaço disponível */
+  max-width: 250px; /* Define um limite máximo de largura */
+  height: 100%; /* Para manter todos na mesma altura */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex-grow: 1; /* Expande o corpo do card para alinhar corretamente */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribui os elementos */
+}
+
+.img-prod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Altura fixa para todas as imagens */
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+}
+
+
+
 .card-img, .card-img-top {
   border-radius: 0!important;
 }
