@@ -15,14 +15,14 @@
 
     <title>Iphones</title>
 
-    <meta property="og:title" content="Produtos Viralizados" />
+    <meta property="og:title" content="Iphones" />
     <meta property="og:description" content="Uma seleção de produtos mais viralizados e bem avaliados da internet, todos com avaliação acima de 4.9 estrelas. Confira!" />
     <meta property="og:url" content="https://lochaydeoliveira.com.br/catalogo.html" />
     <meta property="og:image" content="https://lochaydeoliveira.com.br/img/logo lochayde blog divulgacao.jpg" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Produtos Viralizados">
+    <meta name="twitter:title" content="Iphones">
     <meta name="twitter:description" content="Uma seleção de produtos mais viralizados e bem avaliados da internet, todos com avaliação acima de 4.9 estrelas. Confira!">
     <meta name="twitter:image" content="https://lochaydeoliveira.com.br/img/logo lochayde blog divulgacao.jpg">
 
@@ -58,16 +58,7 @@
     <script src="swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const ratingElements = document.querySelectorAll(".stars");
-          ratingElements.forEach(el => {
-            let rating = parseFloat(el.getAttribute("data-rating"));
-            let filledStars = Math.round(rating);
-            el.innerHTML = "\u2605".repeat(filledStars) + "\u2606".repeat(5 - filledStars);
-          });
-        });
-    </script>
+
 
 </body>
 
@@ -107,13 +98,11 @@ document.addEventListener("DOMContentLoaded", function() {
             
                 for (let i = 1; i <= 5; i++) {
                     if (rating >= 4.7) {
-                        starsHTML += '<i class="bi bi-star-fill"></i>'; // 5 estrelas cheias
+                        starsHTML += '<i class="bi bi-star-fill"></i>'; 
                     } else if (rating > 4.4 && rating < 4.6 && i === 5) {
-                        starsHTML += '<i class="bi bi-star-half"></i>'; // Quinta estrela pela metade
-                    } else if (rating <= 4.4 && i === 5) {
-                        starsHTML += '<i class="bi bi-star"></i>'; // Quinta estrela vazia
-                    } else {
-                        starsHTML += '<i class="bi bi-star-fill"></i>'; // Estrelas cheias padrão
+                        starsHTML += '<i class="bi bi-star-half"></i>'; 
+                        starsHTML += '<i class="bi bi-star"></i>'; 
+                        starsHTML += '<i class="bi bi-star-fill"></i>';
                     }
                 }
             

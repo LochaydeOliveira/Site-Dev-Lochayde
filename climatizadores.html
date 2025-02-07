@@ -13,16 +13,16 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8313157699231074" crossorigin="anonymous"></script>
 
-    <title>Smartwatches</title>
+    <title>Iphones</title>
 
-    <meta property="og:title" content="Smartwatches" />
+    <meta property="og:title" content="Climatizadores" />
     <meta property="og:description" content="Uma seleção de produtos mais viralizados e bem avaliados da internet, todos com avaliação acima de 4.9 estrelas. Confira!" />
     <meta property="og:url" content="https://lochaydeoliveira.com.br/catalogo.html" />
     <meta property="og:image" content="https://lochaydeoliveira.com.br/img/logo lochayde blog divulgacao.jpg" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Smartwatches">
+    <meta name="twitter:title" content="Climatizadores">
     <meta name="twitter:description" content="Uma seleção de produtos mais viralizados e bem avaliados da internet, todos com avaliação acima de 4.9 estrelas. Confira!">
     <meta name="twitter:image" content="https://lochaydeoliveira.com.br/img/logo lochayde blog divulgacao.jpg">
 
@@ -43,10 +43,11 @@
     <link rel="shortcut icon" href="img/Icone favoritos.png" type="image/x-icon">
 </head>
 
+
 <body>
     <div data-include-html="header.html"></div>
     <div class="container mt-4">
-        <h1 class="p-4 text-center">Smart<strong>Watches</strong></h1>
+        <h1 class="p-4 text-center"><strong>Climatizadores</strong></h1>
         <div id="product-container" class="row row-cols-2 row-cols-md-6 g-4"></div>
     </div>
     <div data-include-html="footer.html"></div>
@@ -57,16 +58,6 @@
     <script src="swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const ratingElements = document.querySelectorAll(".stars");
-          ratingElements.forEach(el => {
-            let rating = parseFloat(el.getAttribute("data-rating"));
-            let filledStars = Math.round(rating);
-            el.innerHTML = "\u2605".repeat(filledStars) + "\u2606".repeat(5 - filledStars);
-          });
-        });
-    </script>
 
 </body>
 
@@ -74,7 +65,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  fetch("smartwatches.json")  
+  fetch("climatizadores.json")  
   .then(response => response.json())
   .then(products => {
       const container = document.getElementById("product-container");
