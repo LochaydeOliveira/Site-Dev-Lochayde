@@ -28,19 +28,17 @@ white-space: normal;
 
 }
 
-
-
 .card-title:hover {
-  color: #000000;
-  font-weight: 500;
-  text-decoration: none!important;
+  position: absolute;
+  background: white;
+  z-index: 10;
   white-space: normal;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-  -webkit-line-clamp: none!important;
-  -webkit-box-orient: none!important;
+  overflow: visible;
+  text-overflow: unset;
+  max-width: 300px;
 }
+
+
 
 
 .stars {
